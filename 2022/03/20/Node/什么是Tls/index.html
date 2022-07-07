@@ -1,0 +1,299 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>关于TLS经验小结 | Hexo</title><meta name="keywords" content="笔记,网络"><meta name="author" content="John Doe"><meta name="copyright" content="John Doe"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="关于Tls.......">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于TLS经验小结">
+<meta property="og:url" content="http://example.com/2022/03/20/Node/%E4%BB%80%E4%B9%88%E6%98%AFTls/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="关于Tls.......">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/images/background.jpg">
+<meta property="article:published_time" content="2022-03-19T16:00:00.000Z">
+<meta property="article:modified_time" content="2022-04-11T13:37:42.565Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="笔记">
+<meta property="article:tag" content="网络">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/images/background.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2022/03/20/Node/%E4%BB%80%E4%B9%88%E6%98%AFTls/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '关于TLS经验小结',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-04-11 21:37:42'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.2.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">13</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">20</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">20</div></a></div><hr/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/images/background.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Hexo</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">关于TLS经验小结</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2022-03-19T16:00:00.000Z" title="Created 2022-03-20 00:00:00">2022-03-20</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2022-04-11T13:37:42.565Z" title="Updated 2022-04-11 21:37:42">2022-04-11</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%AC%94%E8%AE%B0/%E7%BD%91%E7%BB%9C/">网络</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="关于TLS经验小结"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="关于TLS经验小结"><a href="#关于TLS经验小结" class="headerlink" title="关于TLS经验小结"></a><strong>关于TLS经验小结</strong></h1><h2 id="什么是tls？"><a href="#什么是tls？" class="headerlink" title="什么是tls？"></a>什么是tls？</h2><p>安全传输层协议（Transport Layer Security）用于在两个通信应用程序之间提供保密性和数据完整性。TLS是SSL的标准化后的产物，有有1.0 1.1 1.2 1.3四个版本，目前最常用的是tls1.2协议。</p>
+<p>1.1 算法种类</p>
+<ul>
+<li>非对称加密: RSA DH</li>
+<li>对称加密: AES DESHash</li>
+<li>算法(散列): md5 sha1 sha256</li>
+</ul>
+<p>1.2 tls协议里面的算法的概念</p>
+<ul>
+<li>密钥交换算法(Kx)</li>
+<li>认证算法(Au)</li>
+<li>加密算法(Enc)</li>
+<li>消息摘要算法(Mac)</li>
+</ul>
+<p>说了这么多，估计大家也有点懵逼了。大家肯定也有一个疑问，上述介绍的这些到底有什么用呢？ok 先上个图：</p>
+<img src="https://gitee.com/zhy_bc/my-photo-manage/raw/master/Typora/Image.png" alt="Image" style="zoom: 80%;" />
+
+<p>​		Tips：这张图描述的是SSL通过RSA非对称加密方式的握手流程：</p>
+<ol>
+<li>ssl握手过程:<ol>
+<li>客户端(一般为浏览器)向服务器发起send hello 其中的内容为:<ol>
+<li>协议版本号（支持的tls版本）</li>
+<li>客户端生成的随机数（Client random） </li>
+<li>以及客户端支持的对称加密方法集。</li>
+</ol>
+</li>
+<li>服务端根据客户端send hello请求内容返回本次通信的tls版本， 具体使用哪一种对称加密方法,服务器生成的随机数（Server random） 以及服务器的证书及证书链。</li>
+<li>客户端采用对应CA的公钥(认证算法)检查该证书是否有效、有没有 过期。如果证书没有问题。就再生成一个新随机数(Premaster secret)。 并且用服务端给的证书公钥加密这个随机数发送给服务器。</li>
+<li>服务器用证书秘钥解密客户端发来的加密随机数(Premaster secret)。根据刚才双方协商的对称加密算法，使用之前的三个随机数去生成一个对话秘 钥，接下来的所有通信加解密都使用这个对话秘钥进行。</li>
+</ol>
+</li>
+<li>为什么要用非对称加密？<ol>
+<li>在进行ssl握手时（此时只是建立连接并没有开始传输数据）一切的握手传输数据都是明文的。 而我们在握手成功后最终需要用来对数据进行加解密的是对称加密方法。对称加密方法的好处 是，体积小，效率高。缺点也是显而易见，通信的暗号或密码绝对不能被他人知道。但是ssl 握手时是明文。所以为了不暴露对称加密的暗号或密码我们需要用非对称加密的方式保护起来。</li>
+</ol>
+</li>
+<li>这样的握手机制真的很安全吗？<ol>
+<li>刚才的RSA握手机制我们注意到以下几点:<ol>
+<li>一共生成了3次随机数</li>
+<li>服务器需要将自己的证书公钥发送给客户端已便客户端生成Premaster secret那么问题来了？如果在你(客户端)与服务器中间有一个每天都没事情做，和你怼上了就一直监控收集你和 服务端之间的通信数据的中间人。然后某一天服务器的私钥不小心泄露了，又刚好秘钥被 这个中间人获得了，因为握手时数据为明文而且为了客户端生成Premaster secret 服 务端发送了公钥，所以中间人很容易得到公钥。最后不幸的事情发生了，中间人有公钥也 有秘钥。虽然服务器马上更换了证书。但是之前的数据，中间人全部都可以解密而获得到。<strong>那有什么办法可以规避？</strong><img src="https://gitee.com/zhy_bc/my-photo-manage/raw/master/Typora/Image.png" alt="image-20220320121243961">上图是基于DH算法的SSL握手流程</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<p>DH和RSA有什么区别吗？</p>
+<p>其他的步骤基本一致，只有一点。</p>
+<p>RSA采用的是服务器发送证书公钥，客户端公钥加密随机数再传输给服务端解密最后 生成session key</p>
+<p>而DH采用的是服务端发送算法的相应算法加解密参数，客户端也发送算法的相应参数。然后两边自己算自己的。最后对比，如果一致则建立session key，这样就算泄露了，由于在建立连接时并没有传输证书公钥所以不会对之前的数据产生被破解的风险。这就是PFS（Perfect Forward Secrecy）完美前向安全性。</p>
+<h2 id="什么是对称加密？"><a href="#什么是对称加密？" class="headerlink" title="什么是对称加密？"></a>什么是对称加密？</h2><p>采用单钥密码系统的加密方法，同一个密钥可以同时用作信息的加密和解密，这种加密方法称为对称加密。</p>
+<p>它的优点:</p>
+<ul>
+<li>安全强度高</li>
+<li>计算量小</li>
+<li>加解密速度快效率高</li>
+</ul>
+<p>如图：</p>
+<p><img src="https://gitee.com/zhy_bc/my-photo-manage/raw/master/Typora/image-20220320121059794.png" alt="image-20220320121059794"></p>
+<p>从图中我们可以看到,在相同安全强度的情况下,对称加密80位长度 &#x3D; RSA加密1024位长度 &#x3D; EC椭圆曲线算法加密160位长度。秘钥长度越长计算量越大体积也越大。由此可见在性能方面对称加密是性能最优的。</p>
+<p>所以这也是为什么在建立连接之后我们更倾向于使用对称加密的方式进行数据加密的原因。</p>
+<h2 id="对称加密模式"><a href="#对称加密模式" class="headerlink" title="对称加密模式"></a>对称加密模式</h2><p>对称加密主要是有6种常见的模式：</p>
+<ol>
+<li>ECB模式 电子密码本模式</li>
+<li>CBC模式 密文分组链接模式</li>
+<li>CFB模式 密文反馈模式</li>
+<li>OFB模式 输出反馈模式</li>
+<li>CTR模式 计数器模式</li>
+<li>AEAD模式 关联数据的认证加密模式</li>
+</ol>
+<p>这里我们不讨论算法也不讨论实现方式。</p>
+<p>拿出3个重点 ECB CBC AEAD</p>
+<p><img src="https://gitee.com/zhy_bc/my-photo-manage/raw/master/Typora/image-20220320121407193.png" alt="image-20220320121407193"></p>
+<p>将一个明文信息 拆分成若干个小块，然后分别进行加密。然后并行传输。对端在分别对块进行解密后拼装成一个完整的信息。</p>
+<p>优点显而易见 通俗易懂,简单方便,速度快</p>
+<p>缺点也显而易见 可以对密文块替换删除添加从而篡改明文块的相关数据，同样的明文块会被加密成相同的密文块这样不能很好的隐藏数据模式也无法抵御重放攻击。</p>
+<p>那怎么办呢？ CBC模式登场</p>
+<p><img src="https://gitee.com/zhy_bc/my-photo-manage/raw/master/Typora/image-20220320120810138.png" alt="image-20220320120810138"></p>
+<pre><code>     在CBC模式中，每个明文块先与前一个密文块进行异或运算后再进行加密。在这种方法中，每个密文块都依赖于它前面的所有明文块。同时，为了保证每条消息的唯一性，在第一个块中需要使用初始化向量。
+</code></pre>
+<p>​		这样看上去是不是比ECB模式更好呢？但是这样就不能并行计算效率大打折扣。而且也并没有很安全。为什么？</p>
+<p>​		在这种模式下需要在加载前确保每个块的长度都是总长度的整数倍。一般情况下，明文的最后一个块很有可能会出现长度不足总长度的现象。这个时候，普遍的做法是在最后一个分组后填充一个固定的值。而攻击者可以根据这个原理进行相应的填充攻击。想了解具体内容可以阅读LittleHann大神的文章</p>
+<p><a target="_blank" rel="noopener" href="https://link.jianshu.com/?t=http://www.freebuf.com/articles/web/15504.html">Padding Oracle攻击的分析和思考</a></p>
+<p>那怎么办？</p>
+<p>或许可以尝试下AEAD(认证加密方法) </p>
+<p>它同时对数据提供机密性，完整性和真实性保证。</p>
+<p>AEAD 3种方式(来自维基百科):</p>
+<ul>
+<li>Encrypt-then-MAC（EtM）<ul>
+<li>明文首先被加密，然后基于生成的密文生成MAC。密文和MAC一起发送。</li>
+</ul>
+</li>
+<li>Encrypt-and-MAC（E＆M）<ul>
+<li>基于明文生成MAC，明文加密，无MAC。明文的MAC和密文一起发送。</li>
+</ul>
+</li>
+<li>MAC-then-Encrypt（MtE）<ul>
+<li>基于明文生成MAC，然后明文和MAC一起被加密以产生基于两者的密文。发送密文（包含加密MAC）</li>
+</ul>
+</li>
+</ul>
+<p>注： MAC(消息摘要算法用于数据完整性校验)</p>
+<p>AEAD是目前相对于其他模式而言比较好的选择。</p>
+<h2 id="对称加密算法"><a href="#对称加密算法" class="headerlink" title="对称加密算法"></a>对称加密算法</h2><blockquote>
+<p>AES DES</p>
+</blockquote>
+<p>​		目前使用的几乎都是AES-GCM（DES安全性太差基本处于废弃状态）</p>
+<p>​		那除了这两种还有其他的吗？</p>
+<p>​		答案是有的</p>
+<p>​		ChaCha20</p>
+<p>那这种算法与AES-GCM相比有什么特别之处呢？</p>
+<p><img src="https://gitee.com/zhy_bc/my-photo-manage/raw/master/Typora/image-20220320121521620.png" alt="image-20220320121521620"></p>
+<p>上图展示的是CHACHA20-Poly1305 与 AES-GCM 两种对称加密算法的加密效率。</p>
+<p>​		从这张图中我们可以看到 ChaCha20的加密速度比AES快了差不多3倍左右。那为什么现在的网站打开都基本上AES-GCM呢？</p>
+<p>​		仔细看图我们可以看到，这是基于ARM架构的移动端CPU的加密速度。CHACHA20虽然在移动端CPU架构上加解密速度非常快，但是在传统&gt;的x86架构上却比AES慢。再加上支持CHACHA20的证书比较难申请的到。所以导致了现在的网站打开都基本上AES-GCM。</p>
+<p>​		不过如果业务主要针对是移动端并且服务端硬件配置比较好且申请到了支持CHACHA20的证书。由于该算法在移动端加解密速度非常快。所以能够得到较好的用户体验。（虽然从运维的角度来说应该尽量降低服务器的负载，将负载转移到用户端比较好。主要还是看如何取舍）</p>
+<h2 id="关于TLS1-3"><a href="#关于TLS1-3" class="headerlink" title="关于TLS1.3"></a>关于TLS1.3</h2><p>​		首先我们了解下正常的https请求的流程:</p>
+<p><img src="https://gitee.com/zhy_bc/my-photo-manage/raw/master/Typora/image-20220320121622427.png" alt="image-20220320121622427"></p>
+<p>​		从图片中我们可以看到http的延迟时间大概在56ms</p>
+<p>​		而https因为是在http协议上额外增加了tls协议所以延迟时间大概需要168ms（http+tls）</p>
+<p>​		由此可以看出使用https确实会给网站的打开速度产生影响，最直接的就是用户打开网站速度变慢。而且当用户不小心断开之后又要重&gt;新走完这整一套的步骤。那有什么办法可以规避这种办法呢？</p>
+<p>session id</p>
+<p><img src="https://gitee.com/zhy_bc/my-photo-manage/raw/master/Typora/image-20220320121706984.png" alt="image-20220320121706984"></p>
+<p><img src="https://gitee.com/zhy_bc/my-photo-manage/raw/master/Typora/image-20220320121725432.png" alt="image-20220320121725432"></p>
+<p><img src="https://gitee.com/zhy_bc/my-photo-manage/raw/master/Typora/image-20220320121743929.png" alt="image-20220320121743929"></p>
+<p>​		session id是一种用户断线重连之后能快速建立连接的一种方法。原理非常简单，当用户与服务器第一次成功完成握手之后，服务器&gt;端生成一个session id 自身保存一份，另外一份发送给客户端。当客户端断线重连之后客户端像服务端发送session id 如果服务端发现这个id存在。则免去繁琐的tls握手步骤 直接连接。从图中我们也看到采用这样的方式延迟时间降低了50%左右但是方法不适合分布式架构的业务，原因在于session id 是在每一台服务器中生成的。所以当客户端重连后连接到服务器的另外一台后端业务服务器就会因为没有id 而重新进行一次完整握手。</p>
+<p>session ticket</p>
+<p><img src="https://gitee.com/zhy_bc/my-photo-manage/raw/master/Typora/image-20220320121830718.png" alt="image-20220320121830718"></p>
+<p><img src="https://gitee.com/zhy_bc/my-photo-manage/raw/master/Typora/image-20220320121846671.png" alt="image-20220320121846671"></p>
+<p>​		session ticket的原理与session id 相同只不过session ticket 不是生成id 而是根据服务器上的ticket key 加密一个数据blob发&gt;送给客户端，然后客户端重连时发送blob给服务器，服务器解密这个blob来判断是否是重连用户从而免去繁琐的tls握手步骤。采取这&gt;样的方式的好处就是我们可以将session key 存储在所有的分布式后端业务服务器上。这样不管用户重连到哪一台服务器都可以通过session key来解密判断是否为重连用户。</p>
+<p>​		那我们有更简单方便的方法吗？</p>
+<p>​		有的，那就是tls1.3！</p>
+<p><img src="https://gitee.com/zhy_bc/my-photo-manage/raw/master/Typora/image-20220320121931425.png" alt="image-20220320121931425"></p>
+<p>​		如上图：</p>
+<p>​		tls1.3是最新的tls协议版本。</p>
+<p>​		废弃了很多年老安全性差的算法并且采用了更优秀的握手机制。</p>
+<p>​		tls1.3 移除了RSA握手机制，采用了(EC)HDE 握手机制（RSA与DH的优缺点在上文中有介绍）</p>
+<p>​		移除CBC对称加密模式，采用AEAD模式（对称加密模式上文中有介绍）</p>
+<p>​		以及其他的特性。<a target="_blank" rel="noopener" href="https://link.jianshu.com/?t=https://tools.ietf.org/html/draft-ietf-tls-tls13-21">具体详见</a></p>
+<p>​		其中最瞩目的莫过于新的握手协商机制</p>
+<p>TLS1.3</p>
+<img src="C:\Users\The_Monster\AppData\Roaming\Typora\typora-user-images\image-20220320122035136.png" alt="image-20220320122035136" style="zoom:67%;" />
+
+<p>TLS1.2</p>
+<img src="C:\Users\The_Monster\AppData\Roaming\Typora\typora-user-images\image-20220320122059361.png" alt="image-20220320122059361" style="zoom: 50%;" />
+
+<p>​		如上图tls1.3协议将之前tls1.2需要的步骤整合在一起，然后集中传输。减少了握手次数，从而大幅减少了延迟时间。加快了网站访问速度，使我们再也不用去纠结不上https不安全，上了https访问速度慢的历史性问题。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>​		从之前讲的算法到握手机制。使大家对整个tls协议有了一个大概的认识。从生产环境角度来说，采用ECDH+ECDSA+AES-GCM的 ECC证书是目前在安全性和性能上都相对平衡的一种证书种类。本站的证书就是采用了ECC证书。<a target="_blank" rel="noopener" href="https://link.jianshu.com/?t=https://imququ.com/post/ecc-certificate.html">关于ECC证书可以查看</a></p>
+<p>​		在此感谢峰哥的一次知识分享让我了解到了相关的知识（文章中的一些示例图也源于峰哥的ppt）想具体了解大佬可以访问以下博客更深入的了解</p>
+<p><a target="_blank" rel="noopener" href="https://link.jianshu.com/?t=https://mp.weixin.qq.com/s?__biz=MjM5NzAwNDI4Mg==&mid=2652193066&idx=1&sn=20245f33e41b6dea25d9ad7c5da4d0fa&chksm=bd0177bf8a76fea9f68f0d22e02b331dcadbf34eb1aa680100c76105430e1c6cc6f78f165a72">TLS 1.3 如何用性能为 HTTPS 正名</a></p>
+<p><a target="_blank" rel="noopener" href="https://link.jianshu.com/?t=http://www.ruanyifeng.com/blog/2014/09/illustration-ssl.html">图解SSL&#x2F;TLS协议</a></p>
+<p><a target="_blank" rel="noopener" href="https://link.jianshu.com/?t=https://zh.wikipedia.org/zh-cn/%E5%88%86%E7%BB%84%E5%AF%86%E7%A0%81%E5%B7%A5%E4%BD%9C%E6%A8%A1%E5%BC%8F">分组密码工作模式</a></p>
+<p>作者：HenryYee</p>
+<p>链接：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/081bbf9d6b69">https://www.jianshu.com/p/081bbf9d6b69</a></p>
+<p>来源：简书</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="http://example.com">John Doe</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://example.com/2022/03/20/Node/%E4%BB%80%E4%B9%88%E6%98%AFTls/">http://example.com/2022/03/20/Node/%E4%BB%80%E4%B9%88%E6%98%AFTls/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E7%AC%94%E8%AE%B0/">笔记</a><a class="post-meta__tags" href="/tags/%E7%BD%91%E7%BB%9C/">网络</a></div><div class="post_share"><div class="social-share" data-image="/images/background.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2022/03/20/Node/adb%E8%BF%9E%E6%8E%A5%E9%9B%B7%E7%94%B5%E6%A8%A1%E6%8B%9F%E5%99%A8%E4%BF%AE%E6%94%B9hosts/"><img class="prev-cover" src="/images/background.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">adb连接雷电模拟器修改hosts</div></div></a></div><div class="next-post pull-right"><a href="/2022/03/18/test/hello-world/"><img class="next-cover" src="/images/background.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">Hello World</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>Related Articles</span></div><div class="relatedPosts-list"><div><a href="/2022/03/20/Node/adb%E8%BF%9E%E6%8E%A5%E9%9B%B7%E7%94%B5%E6%A8%A1%E6%8B%9F%E5%99%A8%E4%BF%AE%E6%94%B9hosts/" title="adb连接雷电模拟器修改hosts"><img class="cover" src="/images/background.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-03-20</div><div class="title">adb连接雷电模拟器修改hosts</div></div></a></div><div><a href="/2022/05/15/Node/EF%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%89%B9%E9%87%8F%E5%A4%84%E7%90%86-%E6%95%88%E7%8E%87%E6%8F%90%E5%8D%87/" title="EF提升效率，Z. EntityFramework"><img class="cover" src="/images/background.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-05-15</div><div class="title">EF提升效率，Z. EntityFramework</div></div></a></div><div><a href="/2022/05/15/Node/Iptable/" title="Iptable 详解！"><img class="cover" src="/images/background.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-05-15</div><div class="title">Iptable 详解！</div></div></a></div><div><a href="/2022/04/10/Node/IdentityServer/" title="skoruba-Duende.IdentityServer.Admin"><img class="cover" src="/images/background.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-04-10</div><div class="title">skoruba-Duende.IdentityServer.Admin</div></div></a></div><div><a href="/2022/04/11/Node/IdentityService4%E8%8E%B7%E5%8F%96%E7%94%A8%E6%88%B7/" title="Identity Service 4 APi 获取用户信息"><img class="cover" src="/images/background.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-04-11</div><div class="title">Identity Service 4 APi 获取用户信息</div></div></a></div><div><a href="/2022/04/10/Node/Swagger+IdentityServer4/" title="Swagger-IdentityServer4-oauth2"><img class="cover" src="/images/background.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-04-10</div><div class="title">Swagger-IdentityServer4-oauth2</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">John Doe</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">13</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">20</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">20</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%B3%E4%BA%8ETLS%E7%BB%8F%E9%AA%8C%E5%B0%8F%E7%BB%93"><span class="toc-number">1.</span> <span class="toc-text">关于TLS经验小结</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFtls%EF%BC%9F"><span class="toc-number">1.1.</span> <span class="toc-text">什么是tls？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86%EF%BC%9F"><span class="toc-number">1.2.</span> <span class="toc-text">什么是对称加密？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86%E6%A8%A1%E5%BC%8F"><span class="toc-number">1.3.</span> <span class="toc-text">对称加密模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%B9%E7%A7%B0%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95"><span class="toc-number">1.4.</span> <span class="toc-text">对称加密算法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E4%BA%8ETLS1-3"><span class="toc-number">1.5.</span> <span class="toc-text">关于TLS1.3</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">1.6.</span> <span class="toc-text">总结</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><div class="content"><a class="title" href="/2022/07/07/hello-world/" title="Hello World">Hello World</a><time datetime="2022-07-07T14:19:35.645Z" title="Created 2022-07-07 22:19:35">2022-07-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/05/15/Node/EF%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%89%B9%E9%87%8F%E5%A4%84%E7%90%86-%E6%95%88%E7%8E%87%E6%8F%90%E5%8D%87/" title="EF提升效率，Z. EntityFramework"><img src="/images/background.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="EF提升效率，Z. EntityFramework"/></a><div class="content"><a class="title" href="/2022/05/15/Node/EF%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%89%B9%E9%87%8F%E5%A4%84%E7%90%86-%E6%95%88%E7%8E%87%E6%8F%90%E5%8D%87/" title="EF提升效率，Z. EntityFramework">EF提升效率，Z. EntityFramework</a><time datetime="2022-05-14T16:00:00.000Z" title="Created 2022-05-15 00:00:00">2022-05-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/05/15/Node/Iptable/" title="Iptable 详解！"><img src="/images/background.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Iptable 详解！"/></a><div class="content"><a class="title" href="/2022/05/15/Node/Iptable/" title="Iptable 详解！">Iptable 详解！</a><time datetime="2022-05-14T16:00:00.000Z" title="Created 2022-05-15 00:00:00">2022-05-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/04/11/blogs/Clash%E7%BD%91%E6%98%93%E4%BA%91%E9%85%8D%E7%BD%AE/" title="Clash网易云配置"><img src="/images/background.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Clash网易云配置"/></a><div class="content"><a class="title" href="/2022/04/11/blogs/Clash%E7%BD%91%E6%98%93%E4%BA%91%E9%85%8D%E7%BD%AE/" title="Clash网易云配置">Clash网易云配置</a><time datetime="2022-04-10T16:00:00.000Z" title="Created 2022-04-11 00:00:00">2022-04-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/04/11/Node/IdentityService4%E8%8E%B7%E5%8F%96%E7%94%A8%E6%88%B7/" title="Identity Service 4 APi 获取用户信息"><img src="/images/background.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Identity Service 4 APi 获取用户信息"/></a><div class="content"><a class="title" href="/2022/04/11/Node/IdentityService4%E8%8E%B7%E5%8F%96%E7%94%A8%E6%88%B7/" title="Identity Service 4 APi 获取用户信息">Identity Service 4 APi 获取用户信息</a><time datetime="2022-04-10T16:00:00.000Z" title="Created 2022-04-11 00:00:00">2022-04-11</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2022 By John Doe</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

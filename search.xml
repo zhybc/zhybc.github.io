@@ -85,43 +85,6 @@
     
     
     <entry>
-      <title>Clash网易云配置</title>
-      <link href="/2022/04/11/blogs/Clash%E7%BD%91%E6%98%93%E4%BA%91%E9%85%8D%E7%BD%AE/"/>
-      <url>/2022/04/11/blogs/Clash%E7%BD%91%E6%98%93%E4%BA%91%E9%85%8D%E7%BD%AE/</url>
-      
-        <content type="html"><![CDATA[<h1 id="Clash-网易云配置"><a href="#Clash-网易云配置" class="headerlink" title="Clash-网易云配置"></a>Clash-网易云配置</h1><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,s1.music.126.net,🎬网易云</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,s2.music.126.net,🎬网易云</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,s3.music.126.net,🎬网易云</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,st.music.126.net,🎬网易云</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,p1.music.126.net,🎬网易云</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,p2.music.126.net,🎬网易云</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,p3.music.126.net,🎬网易云</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,p4.music.126.net,🎬网易云</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,m7.music.126.net,🎬网易云</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,m701.music.126.net,🎬网易云</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,m704.music.126.net,🎬网易云</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,m8.music.126.net,🎬网易云</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,m10.music.126.net,🎬网易云</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,music.163.com,🎬网易云</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,*.126.com,🎬网易云</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,*.music.126.net,🎬网易云</span></span><br></pre></td></tr></table></figure>]]></content>
-      
-      
-      <categories>
-          
-          <category> 教程 </category>
-          
-          <category> clash </category>
-          
-          <category> 配置 </category>
-          
-          <category> 网易云 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 教程 </tag>
-            
-            <tag> clash </tag>
-            
-            <tag> 配置 </tag>
-            
-            <tag> 网易云 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Identity Service 4 APi 获取用户信息</title>
       <link href="/2022/04/11/Node/IdentityService4%E8%8E%B7%E5%8F%96%E7%94%A8%E6%88%B7/"/>
       <url>/2022/04/11/Node/IdentityService4%E8%8E%B7%E5%8F%96%E7%94%A8%E6%88%B7/</url>
@@ -147,6 +110,43 @@
             <tag> .net </tag>
             
             <tag> IdentityServer </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Clash网易云配置</title>
+      <link href="/2022/04/11/blogs/Clash%E7%BD%91%E6%98%93%E4%BA%91%E9%85%8D%E7%BD%AE/"/>
+      <url>/2022/04/11/blogs/Clash%E7%BD%91%E6%98%93%E4%BA%91%E9%85%8D%E7%BD%AE/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Clash-网易云配置"><a href="#Clash-网易云配置" class="headerlink" title="Clash-网易云配置"></a>Clash-网易云配置</h1><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,s1.music.126.net,🎬网易云</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,s2.music.126.net,🎬网易云</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,s3.music.126.net,🎬网易云</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,st.music.126.net,🎬网易云</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,p1.music.126.net,🎬网易云</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,p2.music.126.net,🎬网易云</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,p3.music.126.net,🎬网易云</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,p4.music.126.net,🎬网易云</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,m7.music.126.net,🎬网易云</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,m701.music.126.net,🎬网易云</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,m704.music.126.net,🎬网易云</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,m8.music.126.net,🎬网易云</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,m10.music.126.net,🎬网易云</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,music.163.com,🎬网易云</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,*.126.com,🎬网易云</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,*.music.126.net,🎬网易云</span></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 教程 </category>
+          
+          <category> clash </category>
+          
+          <category> 配置 </category>
+          
+          <category> 网易云 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 配置 </tag>
+            
+            <tag> 教程 </tag>
+            
+            <tag> clash </tag>
+            
+            <tag> 网易云 </tag>
             
         </tags>
       
@@ -207,9 +207,9 @@
           
           <category> IdentityServer </category>
           
-          <category> ids4 </category>
-          
           <category> Swagger </category>
+          
+          <category> ids4 </category>
           
           <category> oauth2 </category>
           
@@ -229,6 +229,43 @@
             <tag> Swagger </tag>
             
             <tag> oauth2 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>.net Core Api Swagger Ui 添加注释显示</title>
+      <link href="/2022/04/09/Node/SwaggerUi%E6%B7%BB%E5%8A%A0%E6%B3%A8%E9%87%8A/"/>
+      <url>/2022/04/09/Node/SwaggerUi%E6%B7%BB%E5%8A%A0%E6%B3%A8%E9%87%8A/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Net-Core-Api-Swagger-添加显示注释"><a href="#Net-Core-Api-Swagger-添加显示注释" class="headerlink" title="Net Core Api Swagger 添加显示注释"></a>Net Core Api Swagger 添加显示注释</h1><h2 id="StartUp中配置"><a href="#StartUp中配置" class="headerlink" title="StartUp中配置"></a>StartUp中配置</h2><blockquote><p>在 ConfigureServices 中添加 </p></blockquote><p>相关代码：</p><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> basePath = AppContext.BaseDirectory;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> xmlPath = Path.Combine(basePath, <span class="string">&quot;Gmzta.ControlPlane.Api.xml&quot;</span>);</span><br><span class="line">options.IncludeXmlComments(xmlPath, <span class="literal">true</span>);<span class="comment">//显示控制器层注释</span></span><br><span class="line"><span class="comment">//options.OrderActionsBy(s =&gt; s.RelativePath);//对Action的名称进行排序</span></span><br></pre></td></tr></table></figure><p>如图：</p><p><img src="https://gitee.com/zhy_bc/my-photo-manage/raw/master/Typora/SwaggerUi-image-1.png" alt="image-20220410020403079"></p><h2 id="设置属性-勾选文档生成"><a href="#设置属性-勾选文档生成" class="headerlink" title="设置属性-勾选文档生成"></a>设置属性-勾选文档生成</h2><blockquote><p>错误代码取消1591显示</p></blockquote><p><img src="https://gitee.com/zhy_bc/my-photo-manage/raw/master/Typora/swagger-image-2.png" alt="image-20220410020605065"></p><p>The End.</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 笔记 </category>
+          
+          <category> .net </category>
+          
+          <category> Swagger </category>
+          
+          <category> 配置 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 笔记 </tag>
+            
+            <tag> .net </tag>
+            
+            <tag> Swagger </tag>
+            
+            <tag> 配置 </tag>
             
         </tags>
       
@@ -270,68 +307,6 @@
     
     
     <entry>
-      <title>.net Core Api Swagger Ui 添加注释显示</title>
-      <link href="/2022/04/09/Node/SwaggerUi%E6%B7%BB%E5%8A%A0%E6%B3%A8%E9%87%8A/"/>
-      <url>/2022/04/09/Node/SwaggerUi%E6%B7%BB%E5%8A%A0%E6%B3%A8%E9%87%8A/</url>
-      
-        <content type="html"><![CDATA[<h1 id="Net-Core-Api-Swagger-添加显示注释"><a href="#Net-Core-Api-Swagger-添加显示注释" class="headerlink" title="Net Core Api Swagger 添加显示注释"></a>Net Core Api Swagger 添加显示注释</h1><h2 id="StartUp中配置"><a href="#StartUp中配置" class="headerlink" title="StartUp中配置"></a>StartUp中配置</h2><blockquote><p>在 ConfigureServices 中添加 </p></blockquote><p>相关代码：</p><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> basePath = AppContext.BaseDirectory;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> xmlPath = Path.Combine(basePath, <span class="string">&quot;Gmzta.ControlPlane.Api.xml&quot;</span>);</span><br><span class="line">options.IncludeXmlComments(xmlPath, <span class="literal">true</span>);<span class="comment">//显示控制器层注释</span></span><br><span class="line"><span class="comment">//options.OrderActionsBy(s =&gt; s.RelativePath);//对Action的名称进行排序</span></span><br></pre></td></tr></table></figure><p>如图：</p><p><img src="https://gitee.com/zhy_bc/my-photo-manage/raw/master/Typora/SwaggerUi-image-1.png" alt="image-20220410020403079"></p><h2 id="设置属性-勾选文档生成"><a href="#设置属性-勾选文档生成" class="headerlink" title="设置属性-勾选文档生成"></a>设置属性-勾选文档生成</h2><blockquote><p>错误代码取消1591显示</p></blockquote><p><img src="https://gitee.com/zhy_bc/my-photo-manage/raw/master/Typora/swagger-image-2.png" alt="image-20220410020605065"></p><p>The End.</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 笔记 </category>
-          
-          <category> .net </category>
-          
-          <category> Swagger </category>
-          
-          <category> 配置 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 配置 </tag>
-            
-            <tag> 笔记 </tag>
-            
-            <tag> .net </tag>
-            
-            <tag> Swagger </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Gitee搭建图床</title>
-      <link href="/2022/03/20/blogs/gitee%E5%9B%BE%E5%BA%8A/"/>
-      <url>/2022/03/20/blogs/gitee%E5%9B%BE%E5%BA%8A/</url>
-      
-        <content type="html"><![CDATA[<h1 id="Typroa-Picgo-Gitee-图床"><a href="#Typroa-Picgo-Gitee-图床" class="headerlink" title="[Typroa+Picgo+Gitee]图床"></a>[Typroa+Picgo+Gitee]图床</h1><blockquote><p>Typora破解版下载链接: <a href="https://pan.baidu.com/s/1ilo0dXI0zI9HeqVupMiKvw">https://pan.baidu.com/s/1ilo0dXI0zI9HeqVupMiKvw</a> 提取码: ameh </p><p>PicGo下载 : <a href="https://molunerfinn.com/PicGo/">https://molunerfinn.com/PicGo/</a></p></blockquote><h2 id="Gitee"><a href="#Gitee" class="headerlink" title="Gitee"></a>Gitee</h2><ol><li><p>Gitee创建一个 <strong>公开</strong> 的空仓库作为图床</p></li><li><p>生成令牌<img src="https://gitee.com/zhy_bc/my-photo-manage/raw/master/Typora/image-20220319135024958.png" alt="image-20220319135024958"></p><p><strong>权限设置</strong></p></li></ol><img src="https://gitee.com/zhy_bc/my-photo-manage/raw/master/Typora/image-20220319135206100.png" alt="image-20220319135206100" style="zoom:67%;" /><h2 id="Picgo-配置"><a href="#Picgo-配置" class="headerlink" title="Picgo 配置"></a>Picgo 配置</h2><ol><li><p>下载gitee-uploader<img src="https://gitee.com/zhy_bc/my-photo-manage/raw/master/Typora/image-20220319135412432.png" alt="image-20220319135412432" style="zoom:67%;" /></p><p>或者 上传本地插件</p></li><li><p>配置gitee</p></li></ol><img src="https://gitee.com/zhy_bc/my-photo-manage/raw/master/Typora/image-20220319135614114.png" alt="image-20220319135614114" style="zoom:67%;" /><h2 id="Typora"><a href="#Typora" class="headerlink" title="Typora"></a>Typora</h2><ol><li><img src="https://gitee.com/zhy_bc/my-photo-manage/raw/master/Typora/image-20220319135840897.png" alt="image-20220319135840897"></li></ol><h2 id="The-End"><a href="#The-End" class="headerlink" title="The End."></a>The End.</h2>]]></content>
-      
-      
-      <categories>
-          
-          <category> 教程 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 教程 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>adb连接雷电模拟器修改hosts</title>
       <link href="/2022/03/20/Node/adb%E8%BF%9E%E6%8E%A5%E9%9B%B7%E7%94%B5%E6%A8%A1%E6%8B%9F%E5%99%A8%E4%BF%AE%E6%94%B9hosts/"/>
       <url>/2022/03/20/Node/adb%E8%BF%9E%E6%8E%A5%E9%9B%B7%E7%94%B5%E6%A8%A1%E6%8B%9F%E5%99%A8%E4%BF%AE%E6%94%B9hosts/</url>
@@ -354,9 +329,9 @@
       
         <tags>
             
-            <tag> 配置 </tag>
-            
             <tag> 笔记 </tag>
+            
+            <tag> 配置 </tag>
             
             <tag> 网络 </tag>
             
@@ -390,6 +365,31 @@
             <tag> 笔记 </tag>
             
             <tag> 网络 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Gitee搭建图床</title>
+      <link href="/2022/03/20/blogs/gitee%E5%9B%BE%E5%BA%8A/"/>
+      <url>/2022/03/20/blogs/gitee%E5%9B%BE%E5%BA%8A/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Typroa-Picgo-Gitee-图床"><a href="#Typroa-Picgo-Gitee-图床" class="headerlink" title="[Typroa+Picgo+Gitee]图床"></a>[Typroa+Picgo+Gitee]图床</h1><blockquote><p>Typora破解版下载链接: <a href="https://pan.baidu.com/s/1ilo0dXI0zI9HeqVupMiKvw">https://pan.baidu.com/s/1ilo0dXI0zI9HeqVupMiKvw</a> 提取码: ameh </p><p>PicGo下载 : <a href="https://molunerfinn.com/PicGo/">https://molunerfinn.com/PicGo/</a></p></blockquote><h2 id="Gitee"><a href="#Gitee" class="headerlink" title="Gitee"></a>Gitee</h2><ol><li><p>Gitee创建一个 <strong>公开</strong> 的空仓库作为图床</p></li><li><p>生成令牌<img src="https://gitee.com/zhy_bc/my-photo-manage/raw/master/Typora/image-20220319135024958.png" alt="image-20220319135024958"></p><p><strong>权限设置</strong></p></li></ol><img src="https://gitee.com/zhy_bc/my-photo-manage/raw/master/Typora/image-20220319135206100.png" alt="image-20220319135206100" style="zoom:67%;" /><h2 id="Picgo-配置"><a href="#Picgo-配置" class="headerlink" title="Picgo 配置"></a>Picgo 配置</h2><ol><li><p>下载gitee-uploader<img src="https://gitee.com/zhy_bc/my-photo-manage/raw/master/Typora/image-20220319135412432.png" alt="image-20220319135412432" style="zoom:67%;" /></p><p>或者 上传本地插件</p></li><li><p>配置gitee</p></li></ol><img src="https://gitee.com/zhy_bc/my-photo-manage/raw/master/Typora/image-20220319135614114.png" alt="image-20220319135614114" style="zoom:67%;" /><h2 id="Typora"><a href="#Typora" class="headerlink" title="Typora"></a>Typora</h2><ol><li><img src="https://gitee.com/zhy_bc/my-photo-manage/raw/master/Typora/image-20220319135840897.png" alt="image-20220319135840897"></li></ol><h2 id="The-End"><a href="#The-End" class="headerlink" title="The End."></a>The End.</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> 教程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 教程 </tag>
             
         </tags>
       

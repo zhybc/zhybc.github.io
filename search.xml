@@ -85,6 +85,43 @@
     
     
     <entry>
+      <title>Clash网易云配置</title>
+      <link href="/2022/04/11/blogs/Clash%E7%BD%91%E6%98%93%E4%BA%91%E9%85%8D%E7%BD%AE/"/>
+      <url>/2022/04/11/blogs/Clash%E7%BD%91%E6%98%93%E4%BA%91%E9%85%8D%E7%BD%AE/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Clash-网易云配置"><a href="#Clash-网易云配置" class="headerlink" title="Clash-网易云配置"></a>Clash-网易云配置</h1><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,s1.music.126.net,🎬网易云</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,s2.music.126.net,🎬网易云</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,s3.music.126.net,🎬网易云</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,st.music.126.net,🎬网易云</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,p1.music.126.net,🎬网易云</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,p2.music.126.net,🎬网易云</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,p3.music.126.net,🎬网易云</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,p4.music.126.net,🎬网易云</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,m7.music.126.net,🎬网易云</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,m701.music.126.net,🎬网易云</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,m704.music.126.net,🎬网易云</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,m8.music.126.net,🎬网易云</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,m10.music.126.net,🎬网易云</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,music.163.com,🎬网易云</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,*.126.com,🎬网易云</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,*.music.126.net,🎬网易云</span></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 教程 </category>
+          
+          <category> clash </category>
+          
+          <category> 配置 </category>
+          
+          <category> 网易云 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 教程 </tag>
+            
+            <tag> clash </tag>
+            
+            <tag> 配置 </tag>
+            
+            <tag> 网易云 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Identity Service 4 APi 获取用户信息</title>
       <link href="/2022/04/11/Node/IdentityService4%E8%8E%B7%E5%8F%96%E7%94%A8%E6%88%B7/"/>
       <url>/2022/04/11/Node/IdentityService4%E8%8E%B7%E5%8F%96%E7%94%A8%E6%88%B7/</url>
@@ -110,43 +147,6 @@
             <tag> .net </tag>
             
             <tag> IdentityServer </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Clash网易云配置</title>
-      <link href="/2022/04/11/blogs/Clash%E7%BD%91%E6%98%93%E4%BA%91%E9%85%8D%E7%BD%AE/"/>
-      <url>/2022/04/11/blogs/Clash%E7%BD%91%E6%98%93%E4%BA%91%E9%85%8D%E7%BD%AE/</url>
-      
-        <content type="html"><![CDATA[<h1 id="Clash-网易云配置"><a href="#Clash-网易云配置" class="headerlink" title="Clash-网易云配置"></a>Clash-网易云配置</h1><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,s1.music.126.net,🎬网易云</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,s2.music.126.net,🎬网易云</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,s3.music.126.net,🎬网易云</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,st.music.126.net,🎬网易云</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,p1.music.126.net,🎬网易云</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,p2.music.126.net,🎬网易云</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,p3.music.126.net,🎬网易云</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,p4.music.126.net,🎬网易云</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,m7.music.126.net,🎬网易云</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,m701.music.126.net,🎬网易云</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,m704.music.126.net,🎬网易云</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,m8.music.126.net,🎬网易云</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,m10.music.126.net,🎬网易云</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,music.163.com,🎬网易云</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,*.126.com,🎬网易云</span></span><br><span class="line"><span class="bullet">-</span> <span class="string">DOMAIN-SUFFIX,*.music.126.net,🎬网易云</span></span><br></pre></td></tr></table></figure>]]></content>
-      
-      
-      <categories>
-          
-          <category> 教程 </category>
-          
-          <category> clash </category>
-          
-          <category> 配置 </category>
-          
-          <category> 网易云 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 配置 </tag>
-            
-            <tag> 教程 </tag>
-            
-            <tag> clash </tag>
-            
-            <tag> 网易云 </tag>
             
         </tags>
       
@@ -237,43 +237,6 @@
     
     
     <entry>
-      <title>.net Core Api Swagger Ui 添加注释显示</title>
-      <link href="/2022/04/09/Node/SwaggerUi%E6%B7%BB%E5%8A%A0%E6%B3%A8%E9%87%8A/"/>
-      <url>/2022/04/09/Node/SwaggerUi%E6%B7%BB%E5%8A%A0%E6%B3%A8%E9%87%8A/</url>
-      
-        <content type="html"><![CDATA[<h1 id="Net-Core-Api-Swagger-添加显示注释"><a href="#Net-Core-Api-Swagger-添加显示注释" class="headerlink" title="Net Core Api Swagger 添加显示注释"></a>Net Core Api Swagger 添加显示注释</h1><h2 id="StartUp中配置"><a href="#StartUp中配置" class="headerlink" title="StartUp中配置"></a>StartUp中配置</h2><blockquote><p>在 ConfigureServices 中添加 </p></blockquote><p>相关代码：</p><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> basePath = AppContext.BaseDirectory;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> xmlPath = Path.Combine(basePath, <span class="string">&quot;Gmzta.ControlPlane.Api.xml&quot;</span>);</span><br><span class="line">options.IncludeXmlComments(xmlPath, <span class="literal">true</span>);<span class="comment">//显示控制器层注释</span></span><br><span class="line"><span class="comment">//options.OrderActionsBy(s =&gt; s.RelativePath);//对Action的名称进行排序</span></span><br></pre></td></tr></table></figure><p>如图：</p><p><img src="http://reqj6ffi8.hn-bkt.clouddn.com/blogimages/image-20220709125226621.png" alt="image-20220709125226621"></p><h2 id="设置属性-勾选文档生成"><a href="#设置属性-勾选文档生成" class="headerlink" title="设置属性-勾选文档生成"></a>设置属性-勾选文档生成</h2><blockquote><p>错误代码取消1591显示</p></blockquote><p><img src="http://reqj6ffi8.hn-bkt.clouddn.com/blogimages/image-20220709125754112.png" alt="image-20220709125754112"></p><h2 id="The-End"><a href="#The-End" class="headerlink" title="The End."></a>The End.</h2>]]></content>
-      
-      
-      <categories>
-          
-          <category> 笔记 </category>
-          
-          <category> .net </category>
-          
-          <category> Swagger </category>
-          
-          <category> 配置 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 笔记 </tag>
-            
-            <tag> .net </tag>
-            
-            <tag> Swagger </tag>
-            
-            <tag> 配置 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>hexo 常用命令</title>
       <link href="/2022/04/09/blogs/Hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
       <url>/2022/04/09/blogs/Hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
@@ -307,20 +270,20 @@
     
     
     <entry>
-      <title>adb连接雷电模拟器修改hosts</title>
-      <link href="/2022/03/20/Node/adb%E8%BF%9E%E6%8E%A5%E9%9B%B7%E7%94%B5%E6%A8%A1%E6%8B%9F%E5%99%A8%E4%BF%AE%E6%94%B9hosts/"/>
-      <url>/2022/03/20/Node/adb%E8%BF%9E%E6%8E%A5%E9%9B%B7%E7%94%B5%E6%A8%A1%E6%8B%9F%E5%99%A8%E4%BF%AE%E6%94%B9hosts/</url>
+      <title>.net Core Api Swagger Ui 添加注释显示</title>
+      <link href="/2022/04/09/Node/SwaggerUi%E6%B7%BB%E5%8A%A0%E6%B3%A8%E9%87%8A/"/>
+      <url>/2022/04/09/Node/SwaggerUi%E6%B7%BB%E5%8A%A0%E6%B3%A8%E9%87%8A/</url>
       
-        <content type="html"><![CDATA[<h1 id="adb连接雷电模拟器修改hosts"><a href="#adb连接雷电模拟器修改hosts" class="headerlink" title="adb连接雷电模拟器修改hosts"></a><strong>adb连接雷电模拟器修改hosts</strong></h1><p>下面很多都是转载,背景简介:我的模拟器有2个以上devices,按照网上查询的很多都不能使用,在下面才找到解决方案</p><ol><li>如果找到<a href="https://so.csdn.net/so/search?q=adb&spm=1001.2101.3001.7020">adb</a>？</li></ol><p>雷电安装模拟器自带了一份，当然熟悉的朋友，喜欢用自己珍藏的版本也是可以的。雷电自带的版本再安装目录下，名字就叫adb.exe，如本人的电脑adb全路径为：F:\mnq\dnplayer\adb.exe.</p><ol start="2"><li>如何链接设备？</li></ol><p>一步步看命令行</p><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cmd</span><br><span class="line">cd F:\mnq\dnplayer</span><br><span class="line">adb.exe kill-server <span class="comment">//(很多时候连不上，就是因为没有kill)</span></span><br><span class="line">adb.exe devices</span><br></pre></td></tr></table></figure><p>这步很重要，完成之后，会list出所有设备</p><p>备注:我使用的是配置到环境变量中的adb,可以直接使用 adb devices</p><ol start="3"><li>多开的情况下如何指定操作哪个模拟器？</li></ol><p>这一步至关重要，所以提前说明，后面的所有操作都是单开为例，多开的情况，请参考这部分，切记切记！！！</p><p>adb devices会获取模拟器列表，指定模拟器只需要在adb后面加上” -s 模拟器标识”即可！</p><p>比如说：</p><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">5555</span></span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">5557</span></span><br></pre></td></tr></table></figure><p>（对，雷电的adb端口是有规律的，规律就是 5555 + index * 2）</p><p>下面图片是我本地的</p><p><img src="http://reqj6ffi8.hn-bkt.clouddn.com/blogimages/20201204141422735.png" alt="20201204141422735"></p><ol start="4"><li>重新挂载模拟器</li></ol><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adb -s emulator<span class="number">-5556</span> remount</span><br></pre></td></tr></table></figure><ol start="5"><li><p>将模拟器hosts pull到本地目录C:\Users\Administrator</p><p><img src="http://reqj6ffi8.hn-bkt.clouddn.com/blogimages/20201204141707851.png" alt="20201204141707851"></p></li><li><p>在本地用记事本打开hosts文件(在C:\Users\Administrator文件中 ) 修改hosts文件，然后保存</p><p><img src="http://reqj6ffi8.hn-bkt.clouddn.com/blogimages/6a5efc7b62c6a2d51c73a18d8fc7ce6f.png" alt="6a5efc7b62c6a2d51c73a18d8fc7ce6f"></p></li><li><p>将修改后的hosts文件上传到模拟器</p></li></ol><p><img src="http://reqj6ffi8.hn-bkt.clouddn.com/blogimages/image-20220320122731087.png" alt="image-20220320122731087"></p><p>上传成功</p><p>++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</p><blockquote><p>备注:上面的过程我看了是可以把hosts上传到模拟器上的,但是hosts的配置不起作用,也不知道什么问题,今天刚刚我把雷电模拟器启用了网络桥接,然后又重新配置了一下hosts,使用第5步把</p></blockquote><ul><li>重新配置的hosts上传到模拟器上,结果现在可以了</li></ul><p><img src="http://reqj6ffi8.hn-bkt.clouddn.com/blogimages/image-20220320112458296.png" alt="image-20220320112458296"></p><ul><li>下面的是我的桥接配置</li></ul><p><img src="http://reqj6ffi8.hn-bkt.clouddn.com/blogimages/image-20220320112655602.png" alt="image-20220320112655602"></p><p>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</p><p>2021年4月22日17:27:23</p><p>今日重新配置了一遍,发现了几个问题</p><ol><li>我下载下来的hosts修改完以后(我这边修改了两行分别是</li></ol><p>127.0.0.1 aa.com </p><p>127.0.0.1 bb.com</p><p>结果aa.com可以访问到本地,bb不可以,然后我又加了一行cc.com.bb才可以访问.好像是最后一行最好需要回车一下要不然上传到模拟器以后格式会出现问题)</p><ol start="2"><li>修改完以后电脑最好重启一下</li></ol>]]></content>
+        <content type="html"><![CDATA[<h1 id="Net-Core-Api-Swagger-添加显示注释"><a href="#Net-Core-Api-Swagger-添加显示注释" class="headerlink" title="Net Core Api Swagger 添加显示注释"></a>Net Core Api Swagger 添加显示注释</h1><h2 id="StartUp中配置"><a href="#StartUp中配置" class="headerlink" title="StartUp中配置"></a>StartUp中配置</h2><blockquote><p>在 ConfigureServices 中添加 </p></blockquote><p>相关代码：</p><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> basePath = AppContext.BaseDirectory;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> xmlPath = Path.Combine(basePath, <span class="string">&quot;Gmzta.ControlPlane.Api.xml&quot;</span>);</span><br><span class="line">options.IncludeXmlComments(xmlPath, <span class="literal">true</span>);<span class="comment">//显示控制器层注释</span></span><br><span class="line"><span class="comment">//options.OrderActionsBy(s =&gt; s.RelativePath);//对Action的名称进行排序</span></span><br></pre></td></tr></table></figure><p>如图：</p><p><img src="http://reqj6ffi8.hn-bkt.clouddn.com/blogimages/image-20220709125226621.png" alt="image-20220709125226621"></p><h2 id="设置属性-勾选文档生成"><a href="#设置属性-勾选文档生成" class="headerlink" title="设置属性-勾选文档生成"></a>设置属性-勾选文档生成</h2><blockquote><p>错误代码取消1591显示</p></blockquote><p><img src="http://reqj6ffi8.hn-bkt.clouddn.com/blogimages/image-20220709125754112.png" alt="image-20220709125754112"></p><h2 id="The-End"><a href="#The-End" class="headerlink" title="The End."></a>The End.</h2>]]></content>
       
       
       <categories>
           
           <category> 笔记 </category>
           
-          <category> 网络 </category>
+          <category> .net </category>
           
-          <category> 雷电模拟器 </category>
+          <category> Swagger </category>
           
           <category> 配置 </category>
           
@@ -329,13 +292,13 @@
       
         <tags>
             
-            <tag> 笔记 </tag>
-            
             <tag> 配置 </tag>
             
-            <tag> 网络 </tag>
+            <tag> 笔记 </tag>
             
-            <tag> 雷电模拟器 </tag>
+            <tag> .net </tag>
+            
+            <tag> Swagger </tag>
             
         </tags>
       
@@ -361,6 +324,43 @@
         <tags>
             
             <tag> 教程 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>adb连接雷电模拟器修改hosts</title>
+      <link href="/2022/03/20/Node/adb%E8%BF%9E%E6%8E%A5%E9%9B%B7%E7%94%B5%E6%A8%A1%E6%8B%9F%E5%99%A8%E4%BF%AE%E6%94%B9hosts/"/>
+      <url>/2022/03/20/Node/adb%E8%BF%9E%E6%8E%A5%E9%9B%B7%E7%94%B5%E6%A8%A1%E6%8B%9F%E5%99%A8%E4%BF%AE%E6%94%B9hosts/</url>
+      
+        <content type="html"><![CDATA[<h1 id="adb连接雷电模拟器修改hosts"><a href="#adb连接雷电模拟器修改hosts" class="headerlink" title="adb连接雷电模拟器修改hosts"></a><strong>adb连接雷电模拟器修改hosts</strong></h1><p>下面很多都是转载,背景简介:我的模拟器有2个以上devices,按照网上查询的很多都不能使用,在下面才找到解决方案</p><ol><li>如果找到<a href="https://so.csdn.net/so/search?q=adb&spm=1001.2101.3001.7020">adb</a>？</li></ol><p>雷电安装模拟器自带了一份，当然熟悉的朋友，喜欢用自己珍藏的版本也是可以的。雷电自带的版本再安装目录下，名字就叫adb.exe，如本人的电脑adb全路径为：F:\mnq\dnplayer\adb.exe.</p><ol start="2"><li>如何链接设备？</li></ol><p>一步步看命令行</p><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cmd</span><br><span class="line">cd F:\mnq\dnplayer</span><br><span class="line">adb.exe kill-server <span class="comment">//(很多时候连不上，就是因为没有kill)</span></span><br><span class="line">adb.exe devices</span><br></pre></td></tr></table></figure><p>这步很重要，完成之后，会list出所有设备</p><p>备注:我使用的是配置到环境变量中的adb,可以直接使用 adb devices</p><ol start="3"><li>多开的情况下如何指定操作哪个模拟器？</li></ol><p>这一步至关重要，所以提前说明，后面的所有操作都是单开为例，多开的情况，请参考这部分，切记切记！！！</p><p>adb devices会获取模拟器列表，指定模拟器只需要在adb后面加上” -s 模拟器标识”即可！</p><p>比如说：</p><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">5555</span></span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">5557</span></span><br></pre></td></tr></table></figure><p>（对，雷电的adb端口是有规律的，规律就是 5555 + index * 2）</p><p>下面图片是我本地的</p><p><img src="http://reqj6ffi8.hn-bkt.clouddn.com/blogimages/20201204141422735.png" alt="20201204141422735"></p><ol start="4"><li>重新挂载模拟器</li></ol><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adb -s emulator<span class="number">-5556</span> remount</span><br></pre></td></tr></table></figure><ol start="5"><li><p>将模拟器hosts pull到本地目录C:\Users\Administrator</p><p><img src="http://reqj6ffi8.hn-bkt.clouddn.com/blogimages/20201204141707851.png" alt="20201204141707851"></p></li><li><p>在本地用记事本打开hosts文件(在C:\Users\Administrator文件中 ) 修改hosts文件，然后保存</p><p><img src="http://reqj6ffi8.hn-bkt.clouddn.com/blogimages/6a5efc7b62c6a2d51c73a18d8fc7ce6f.png" alt="6a5efc7b62c6a2d51c73a18d8fc7ce6f"></p></li><li><p>将修改后的hosts文件上传到模拟器</p></li></ol><p><img src="http://reqj6ffi8.hn-bkt.clouddn.com/blogimages/image-20220320122731087.png" alt="image-20220320122731087"></p><p>上传成功</p><p>++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</p><blockquote><p>备注:上面的过程我看了是可以把hosts上传到模拟器上的,但是hosts的配置不起作用,也不知道什么问题,今天刚刚我把雷电模拟器启用了网络桥接,然后又重新配置了一下hosts,使用第5步把</p></blockquote><ul><li>重新配置的hosts上传到模拟器上,结果现在可以了</li></ul><p><img src="http://reqj6ffi8.hn-bkt.clouddn.com/blogimages/image-20220320112458296.png" alt="image-20220320112458296"></p><ul><li>下面的是我的桥接配置</li></ul><p><img src="http://reqj6ffi8.hn-bkt.clouddn.com/blogimages/image-20220320112655602.png" alt="image-20220320112655602"></p><p>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</p><p>2021年4月22日17:27:23</p><p>今日重新配置了一遍,发现了几个问题</p><ol><li>我下载下来的hosts修改完以后(我这边修改了两行分别是</li></ol><p>127.0.0.1 aa.com </p><p>127.0.0.1 bb.com</p><p>结果aa.com可以访问到本地,bb不可以,然后我又加了一行cc.com.bb才可以访问.好像是最后一行最好需要回车一下要不然上传到模拟器以后格式会出现问题)</p><ol start="2"><li>修改完以后电脑最好重启一下</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 笔记 </category>
+          
+          <category> 网络 </category>
+          
+          <category> 雷电模拟器 </category>
+          
+          <category> 配置 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 配置 </tag>
+            
+            <tag> 笔记 </tag>
+            
+            <tag> 网络 </tag>
+            
+            <tag> 雷电模拟器 </tag>
             
         </tags>
       

@@ -194,9 +194,9 @@
           
           <category> IdentityServer </category>
           
-          <category> Swagger </category>
-          
           <category> ids4 </category>
+          
+          <category> Swagger </category>
           
           <category> oauth2 </category>
           
@@ -318,11 +318,11 @@
             
             <tag> 笔记 </tag>
             
-            <tag> 配置 </tag>
-            
             <tag> 网络 </tag>
             
             <tag> 雷电模拟器 </tag>
+            
+            <tag> 配置 </tag>
             
         </tags>
       

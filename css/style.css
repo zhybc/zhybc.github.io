@@ -3,7 +3,11 @@
 }
 
 /* 栏目左侧 */
-[data-theme='dark']  .layout > div:first-child:not(.recent-posts),#recent-posts > .recent-post-item{
+[data-theme='dark']  #recent-posts > .recent-post-item{
+    background-color: #2f3542; /*2f3542*/
+}
+
+[data-theme='dark']  .layout > div:first-child:not(.recent-posts){
     background-color: #2f3542; /*2f3542*/
 }
 

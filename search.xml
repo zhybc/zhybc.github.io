@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title>docker和docker-dompose安装</title>
+      <link href="/2022/07/11/Node/Docker%E5%92%8CDocker-compose%E5%AE%89%E8%A3%85/"/>
+      <url>/2022/07/11/Node/Docker%E5%92%8CDocker-compose%E5%AE%89%E8%A3%85/</url>
+      
+        <content type="html"><![CDATA[<h1 id="docker安装"><a href="#docker安装" class="headerlink" title="docker安装"></a>docker安装</h1><p>​安装Docker：新装的Ubuntu系统，需要安装Docker之后，才能使用Dockerfile，已经安装Docker的系统可跳过该步。</p><p>Docker安装参考步骤：<a href="https://developer.aliyun.com/article/762674">https://developer.aliyun.com/article/762674</a></p><p>​*备注：Docker安装后，一般需要管理员权限，因此运行Docker命令需要加sudo，也可以根据文章的说明修改为非管理员权限运行Docker。</p><p>Docker主要安装过程，依次键入以下命令，并等待安装结束：</p><ol><li>首先，更新软件包索引，并且安装必要的依赖软件，来添加一个新的 HTTPS 软件源：</li></ol><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update</span><br><span class="line">sudo apt install apt-transport-https ca-certificates curl gnupg-agent software-properties-common</span><br></pre></td></tr></table></figure><ol start="2"><li>使用下面的 curl 导入源仓库的 GPG key：</li></ol><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -</span><br></pre></td></tr></table></figure><ol start="3"><li>将 Docker APT 软件源添加到你的系统：</li></ol><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository &quot;deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable&quot;</span><br></pre></td></tr></table></figure><ol start="4"><li>现在，Docker 软件源被启用了，你可以安装软件源中任何可用的 Docker 版本。</li></ol><p>安装 Docker 最新版本，运行下面的命令。</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update</span><br><span class="line">sudo apt install docker-ce docker-ce-cli containerd.io</span><br></pre></td></tr></table></figure><h1 id="docker-compose-安装"><a href="#docker-compose-安装" class="headerlink" title="docker-compose 安装"></a>docker-compose 安装</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get install docker-compress</span><br></pre></td></tr></table></figure><p>或者</p><ol><li>拉取</li></ol><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo curl -L &quot;https://github.com/docker/compose/releases/download/1.25.4/docker-compose-$(uname -s)-$(uname -m)&quot; -o /usr/local/bin/docker-compose</span><br></pre></td></tr></table></figure><ol start="2"><li>添加权限</li></ol><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo chmod +x /usr/local/bin/docker-compose</span><br></pre></td></tr></table></figure><h1 id="The-End"><a href="#The-End" class="headerlink" title="The End."></a>The End.</h1>]]></content>
+      
+      
+      <categories>
+          
+          <category> 笔记 </category>
+          
+          <category> docker </category>
+          
+          <category> docker-compose </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> docker </tag>
+            
+            <tag> docker-compose </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>EF提升效率，Z. EntityFramework</title>
       <link href="/2022/05/15/Node/EF%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%89%B9%E9%87%8F%E5%A4%84%E7%90%86-%E6%95%88%E7%8E%87%E6%8F%90%E5%8D%87/"/>
       <url>/2022/05/15/Node/EF%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%89%B9%E9%87%8F%E5%A4%84%E7%90%86-%E6%95%88%E7%8E%87%E6%8F%90%E5%8D%87/</url>
@@ -332,9 +363,9 @@
           
           <category> 网络 </category>
           
-          <category> 配置 </category>
-          
           <category> 雷电模拟器 </category>
+          
+          <category> 配置 </category>
           
       </categories>
       

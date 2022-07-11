@@ -125,9 +125,9 @@
             
             <tag> 笔记 </tag>
             
-            <tag> .net </tag>
-            
             <tag> IdentityServer </tag>
+            
+            <tag> .net </tag>
             
         </tags>
       
@@ -158,11 +158,11 @@
       
         <tags>
             
-            <tag> 配置 </tag>
-            
             <tag> 教程 </tag>
             
             <tag> clash </tag>
+            
+            <tag> 配置 </tag>
             
             <tag> 网易云 </tag>
             
@@ -197,9 +197,9 @@
             
             <tag> 笔记 </tag>
             
-            <tag> .net </tag>
-            
             <tag> IdentityServer </tag>
+            
+            <tag> .net </tag>
             
             <tag> ids4 </tag>
             
@@ -238,15 +238,48 @@
             
             <tag> 笔记 </tag>
             
-            <tag> .net </tag>
-            
             <tag> IdentityServer </tag>
+            
+            <tag> .net </tag>
             
             <tag> ids4 </tag>
             
             <tag> Swagger </tag>
             
             <tag> oauth2 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>hexo 常用命令</title>
+      <link href="/2022/04/09/blogs/Hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+      <url>/2022/04/09/blogs/Hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
+      
+        <content type="html"><![CDATA[<h1 id="1-安装"><a href="#1-安装" class="headerlink" title="1.安装"></a>1.安装</h1><p>安装</p><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo -g</span><br></pre></td></tr></table></figure><p>升级</p><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm update hexo -g</span><br></pre></td></tr></table></figure><p>初始化</p><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure><h2 id="2-发表文章"><a href="#2-发表文章" class="headerlink" title="2.发表文章"></a>2.发表文章</h2><p>新建文章</p><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo n <span class="string">&quot;我的博客&quot;</span> == hexo <span class="built_in">new</span> <span class="string">&quot;我的博客&quot;</span></span><br></pre></td></tr></table></figure><p>发表草稿</p><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo p == hexo publish</span><br></pre></td></tr></table></figure><p>生成静态文件</p><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g == hexo generate</span><br></pre></td></tr></table></figure><p>启动服务预览</p><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s == hexo server</span><br></pre></td></tr></table></figure><p>部署到远程</p><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d == hexo deploy</span><br></pre></td></tr></table></figure><p>联合使用   清除缓存+生成静态文件+运行</p><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</span><br></pre></td></tr></table></figure><h2 id="3-清理缓存"><a href="#3-清理缓存" class="headerlink" title="3.清理缓存"></a>3.清理缓存</h2><p>清除缓存文件 (db.json) 和已生成的静态文件 (public)</p><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure><h2 id="4-版本"><a href="#4-版本" class="headerlink" title="4.版本"></a>4.版本</h2><p>查看Hexo运行版本</p><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo version</span><br></pre></td></tr></table></figure><h2 id="The-End"><a href="#The-End" class="headerlink" title="The End."></a>The End.</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> 教程 </category>
+          
+          <category> Hexo </category>
+          
+          <category> 命令 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 教程 </tag>
+            
+            <tag> Hexo </tag>
+            
+            <tag> 命令 </tag>
             
         </tags>
       
@@ -292,39 +325,6 @@
     
     
     <entry>
-      <title>hexo 常用命令</title>
-      <link href="/2022/04/09/blogs/Hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
-      <url>/2022/04/09/blogs/Hexo%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
-      
-        <content type="html"><![CDATA[<h1 id="1-安装"><a href="#1-安装" class="headerlink" title="1.安装"></a>1.安装</h1><p>安装</p><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo -g</span><br></pre></td></tr></table></figure><p>升级</p><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm update hexo -g</span><br></pre></td></tr></table></figure><p>初始化</p><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure><h2 id="2-发表文章"><a href="#2-发表文章" class="headerlink" title="2.发表文章"></a>2.发表文章</h2><p>新建文章</p><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo n <span class="string">&quot;我的博客&quot;</span> == hexo <span class="built_in">new</span> <span class="string">&quot;我的博客&quot;</span></span><br></pre></td></tr></table></figure><p>发表草稿</p><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo p == hexo publish</span><br></pre></td></tr></table></figure><p>生成静态文件</p><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g == hexo generate</span><br></pre></td></tr></table></figure><p>启动服务预览</p><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s == hexo server</span><br></pre></td></tr></table></figure><p>部署到远程</p><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d == hexo deploy</span><br></pre></td></tr></table></figure><p>联合使用   清除缓存+生成静态文件+运行</p><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</span><br></pre></td></tr></table></figure><h2 id="3-清理缓存"><a href="#3-清理缓存" class="headerlink" title="3.清理缓存"></a>3.清理缓存</h2><p>清除缓存文件 (db.json) 和已生成的静态文件 (public)</p><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure><h2 id="4-版本"><a href="#4-版本" class="headerlink" title="4.版本"></a>4.版本</h2><p>查看Hexo运行版本</p><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo version</span><br></pre></td></tr></table></figure><h2 id="The-End"><a href="#The-End" class="headerlink" title="The End."></a>The End.</h2>]]></content>
-      
-      
-      <categories>
-          
-          <category> 教程 </category>
-          
-          <category> Hexo </category>
-          
-          <category> 命令 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 教程 </tag>
-            
-            <tag> Hexo </tag>
-            
-            <tag> 命令 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>adb连接雷电模拟器修改hosts</title>
       <link href="/2022/03/20/Node/adb%E8%BF%9E%E6%8E%A5%E9%9B%B7%E7%94%B5%E6%A8%A1%E6%8B%9F%E5%99%A8%E4%BF%AE%E6%94%B9hosts/"/>
       <url>/2022/03/20/Node/adb%E8%BF%9E%E6%8E%A5%E9%9B%B7%E7%94%B5%E6%A8%A1%E6%8B%9F%E5%99%A8%E4%BF%AE%E6%94%B9hosts/</url>
@@ -338,9 +338,9 @@
           
           <category> 网络 </category>
           
-          <category> 雷电模拟器 </category>
-          
           <category> 配置 </category>
+          
+          <category> 雷电模拟器 </category>
           
       </categories>
       

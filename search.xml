@@ -4,6 +4,72 @@
   
     
     <entry>
+      <title>使用阿里云创建镜像存储</title>
+      <link href="/2022/07/13/Node/%E9%98%BF%E9%87%8C%E4%BA%91%E5%88%9B%E5%BB%BA%E9%95%9C%E5%83%8F%E5%AD%98%E5%82%A8/"/>
+      <url>/2022/07/13/Node/%E9%98%BF%E9%87%8C%E4%BA%91%E5%88%9B%E5%BB%BA%E9%95%9C%E5%83%8F%E5%AD%98%E5%82%A8/</url>
+      
+        <content type="html"><![CDATA[<h1 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h1><p>进入主页：<a href="https://cr.console.aliyun.com/">容器镜像服务</a></p><p>参考文档：<a href="https://blog.csdn.net/nuptaxin/article/details/124008353">https://blog.csdn.net/nuptaxin/article/details/124008353</a></p><h2 id="选择个人实例"><a href="#选择个人实例" class="headerlink" title="选择个人实例"></a>选择个人实例</h2><p><img src="/../../images/%E9%98%BF%E9%87%8C%E4%BA%91%E5%88%9B%E5%BB%BA%E9%95%9C%E5%83%8F%E5%AD%98%E5%82%A8/image-20220713115704133.png" alt="image-20220713115704133"></p><h2 id="创建个人版"><a href="#创建个人版" class="headerlink" title="创建个人版"></a>创建个人版</h2><p><img src="/../../images/%E9%98%BF%E9%87%8C%E4%BA%91%E5%88%9B%E5%BB%BA%E9%95%9C%E5%83%8F%E5%AD%98%E5%82%A8/image-20220713115728850.png" alt="image-20220713115728850"></p><h2 id="创建完成，点击设置Registry登录密码"><a href="#创建完成，点击设置Registry登录密码" class="headerlink" title="创建完成，点击设置Registry登录密码"></a>创建完成，点击设置Registry登录密码</h2><p><img src="/../../images/%E9%98%BF%E9%87%8C%E4%BA%91%E5%88%9B%E5%BB%BA%E9%95%9C%E5%83%8F%E5%AD%98%E5%82%A8/image-20220713115814538.png" alt="image-20220713115814538"></p><h2 id="创建命名空间-全网唯一"><a href="#创建命名空间-全网唯一" class="headerlink" title="创建命名空间(全网唯一)"></a>创建<a href="https://so.csdn.net/so/search?q=%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4&spm=1001.2101.3001.7020">命名空间</a>(全网唯一)</h2><p><img src="/../../images/%E9%98%BF%E9%87%8C%E4%BA%91%E5%88%9B%E5%BB%BA%E9%95%9C%E5%83%8F%E5%AD%98%E5%82%A8/image-20220713115835118.png" alt="image-20220713115835118"></p><h2 id="创建镜像仓库"><a href="#创建镜像仓库" class="headerlink" title="创建镜像仓库"></a>创建镜像仓库</h2><p><img src="/../../images/%E9%98%BF%E9%87%8C%E4%BA%91%E5%88%9B%E5%BB%BA%E9%95%9C%E5%83%8F%E5%AD%98%E5%82%A8/image-20220713115850609.png" alt="image-20220713115850609"></p><h2 id="选择本地仓库"><a href="#选择本地仓库" class="headerlink" title="选择本地仓库"></a>选择本地仓库</h2><p><img src="/../../images/%E9%98%BF%E9%87%8C%E4%BA%91%E5%88%9B%E5%BB%BA%E9%95%9C%E5%83%8F%E5%AD%98%E5%82%A8/image-20220713115913573.png" alt="image-20220713115913573"></p><h2 id="创建成功"><a href="#创建成功" class="headerlink" title="创建成功"></a>创建成功</h2><p><img src="/../../images/%E9%98%BF%E9%87%8C%E4%BA%91%E5%88%9B%E5%BB%BA%E9%95%9C%E5%83%8F%E5%AD%98%E5%82%A8/image-20220713115946575.png" alt="image-20220713115946575"></p><h1 id="推送"><a href="#推送" class="headerlink" title="推送"></a>推送</h1><blockquote><p>参考仓储基本信息中操作指南</p></blockquote><h3 id="登录"><a href="#登录" class="headerlink" title="登录"></a>登录</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker login --username=ailithemonster registry.cn-hangzhou.aliyuncs.com</span><br></pre></td></tr></table></figure><p><img src="/../../images/%E9%98%BF%E9%87%8C%E4%BA%91%E5%88%9B%E5%BB%BA%E9%95%9C%E5%83%8F%E5%AD%98%E5%82%A8/image-20220713120047109.png" alt="image-20220713120047109"></p><h3 id="推送-1"><a href="#推送-1" class="headerlink" title="推送"></a>推送</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">docker tag [ImageId] registry.cn-hangzhou.aliyuncs.com/thmonster/thmonster_box:[镜像版本号]</span></span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">docker push registry.cn-hangzhou.aliyuncs.com/thmonster/thmonster_box:[镜像版本号]</span></span><br></pre></td></tr></table></figure><blockquote><p>[镜像版本号] – 自定义一个名称</p></blockquote><h3 id="拉取"><a href="#拉取" class="headerlink" title="拉取"></a>拉取</h3><ul><li>私有仓储拉取前需要登录</li><li>[镜像版本号] – 可以在镜像版本中查看</li></ul><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">docker pull registry.cn-hangzhou.aliyuncs.com/thmonster/thmonster_box:[镜像版本号]</span> </span><br></pre></td></tr></table></figure><p><img src="/../../images/%E9%98%BF%E9%87%8C%E4%BA%91%E5%88%9B%E5%BB%BA%E9%95%9C%E5%83%8F%E5%AD%98%E5%82%A8/image-20220713134401487.png" alt="image-20220713134401487"></p><h1 id="The-End"><a href="#The-End" class="headerlink" title="The End."></a>The End.</h1>]]></content>
+      
+      
+      <categories>
+          
+          <category> 笔记 </category>
+          
+          <category> docker </category>
+          
+          <category> 阿里云 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> docker </tag>
+            
+            <tag> 阿里云 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Net6项目发布至阿里云镜像</title>
+      <link href="/2022/07/13/Node/dotnet6%E9%A1%B9%E7%9B%AE%E5%8F%91%E5%B8%83%E9%98%BF%E9%87%8C%E4%BA%91%E9%95%9C%E5%83%8F%E5%AD%98%E5%82%A8/"/>
+      <url>/2022/07/13/Node/dotnet6%E9%A1%B9%E7%9B%AE%E5%8F%91%E5%B8%83%E9%98%BF%E9%87%8C%E4%BA%91%E9%95%9C%E5%83%8F%E5%AD%98%E5%82%A8/</url>
+      
+        <content type="html"><![CDATA[<h1 id="创建发布"><a href="#创建发布" class="headerlink" title="创建发布"></a>创建发布</h1><p><img src="/../../images/dotnet6%E9%A1%B9%E7%9B%AE%E5%8F%91%E5%B8%83%E9%98%BF%E9%87%8C%E4%BA%91%E9%95%9C%E5%83%8F%E5%AD%98%E5%82%A8/image-20220713211410187.png" alt="image-20220713211410187"></p><h1 id="依次点击"><a href="#依次点击" class="headerlink" title="依次点击"></a>依次点击</h1><blockquote><p>发布 -&gt; 新建 -&gt; Doker容器注册表 -&gt; 下一步</p></blockquote><p><img src="/../../images/dotnet6%E9%A1%B9%E7%9B%AE%E5%8F%91%E5%B8%83%E9%98%BF%E9%87%8C%E4%BA%91%E9%95%9C%E5%83%8F%E5%AD%98%E5%82%A8/image-20220713211632985.png" alt="image-20220713211632985"></p><h1 id="其他Docker容器注册表-gt-下一步"><a href="#其他Docker容器注册表-gt-下一步" class="headerlink" title="其他Docker容器注册表 -&gt; 下一步"></a>其他Docker容器注册表 -&gt; 下一步</h1><p><img src="/../../images/dotnet6%E9%A1%B9%E7%9B%AE%E5%8F%91%E5%B8%83%E9%98%BF%E9%87%8C%E4%BA%91%E9%95%9C%E5%83%8F%E5%AD%98%E5%82%A8/image-20220713211741404.png" alt="image-20220713211741404"></p><h1 id="填写注册信息"><a href="#填写注册信息" class="headerlink" title="填写注册信息"></a>填写注册信息</h1><p><img src="/../../images/dotnet6%E9%A1%B9%E7%9B%AE%E5%8F%91%E5%B8%83%E9%98%BF%E9%87%8C%E4%BA%91%E9%95%9C%E5%83%8F%E5%AD%98%E5%82%A8/image-20220713211815865.png" alt="image-20220713211815865"></p><h2 id="说明"><a href="#说明" class="headerlink" title="说明:"></a>说明:</h2><h3 id="注册表信息"><a href="#注册表信息" class="headerlink" title="注册表信息"></a>注册表信息</h3><blockquote><p>实例公网地址&#x2F;空间名称</p></blockquote><ul><li><img src="/../../images/dotnet6%E9%A1%B9%E7%9B%AE%E5%8F%91%E5%B8%83%E9%98%BF%E9%87%8C%E4%BA%91%E9%95%9C%E5%83%8F%E5%AD%98%E5%82%A8/image-20220713211935711.png" alt="image-20220713211935711"></li><li><img src="/../../images/dotnet6%E9%A1%B9%E7%9B%AE%E5%8F%91%E5%B8%83%E9%98%BF%E9%87%8C%E4%BA%91%E9%95%9C%E5%83%8F%E5%AD%98%E5%82%A8/image-20220713212011272.png" alt="image-20220713212011272"></li></ul><p>​</p><h3 id="用户名"><a href="#用户名" class="headerlink" title="用户名"></a>用户名</h3><blockquote><p> 右上角头像会出现信息</p></blockquote><ul><li><img src="/../../images/dotnet6%E9%A1%B9%E7%9B%AE%E5%8F%91%E5%B8%83%E9%98%BF%E9%87%8C%E4%BA%91%E9%95%9C%E5%83%8F%E5%AD%98%E5%82%A8/image-20220713212045462.png" alt="image-20220713212045462"></li></ul><h3 id="密码"><a href="#密码" class="headerlink" title="密码"></a>密码</h3><blockquote><p>密码为开通服务时设置的密码</p></blockquote><ul><li>也可以在凭证中修改</li><li><img src="/../../images/dotnet6%E9%A1%B9%E7%9B%AE%E5%8F%91%E5%B8%83%E9%98%BF%E9%87%8C%E4%BA%91%E9%95%9C%E5%83%8F%E5%AD%98%E5%82%A8/image-20220713212141809.png" alt="image-20220713212141809"></li></ul><p>​</p><h1 id="编辑镜像标签"><a href="#编辑镜像标签" class="headerlink" title="编辑镜像标签"></a>编辑镜像标签</h1><blockquote><p>自动生成 或者 自定义(自定义为当前时间)</p></blockquote><p><img src="/../../images/dotnet6%E9%A1%B9%E7%9B%AE%E5%8F%91%E5%B8%83%E9%98%BF%E9%87%8C%E4%BA%91%E9%95%9C%E5%83%8F%E5%AD%98%E5%82%A8/image-20220713212339012.png" alt="image-20220713212339012"></p><h1 id="点击发布"><a href="#点击发布" class="headerlink" title="点击发布"></a>点击发布</h1><p><img src="/../../images/dotnet6%E9%A1%B9%E7%9B%AE%E5%8F%91%E5%B8%83%E9%98%BF%E9%87%8C%E4%BA%91%E9%95%9C%E5%83%8F%E5%AD%98%E5%82%A8/image-20220713212433264.png" alt="image-20220713212433264"></p><h1 id="成功提示"><a href="#成功提示" class="headerlink" title="成功提示"></a>成功提示</h1><p><img src="/../../images/dotnet6%E9%A1%B9%E7%9B%AE%E5%8F%91%E5%B8%83%E9%98%BF%E9%87%8C%E4%BA%91%E9%95%9C%E5%83%8F%E5%AD%98%E5%82%A8/image-20220713212530419.png" alt="image-20220713212530419"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 笔记 </category>
+          
+          <category> .net </category>
+          
+          <category> 阿里云 </category>
+          
+          <category> 阿里docker </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> docker </tag>
+            
+            <tag> .net </tag>
+            
+            <tag> 阿里云 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>docker和docker-dompose安装</title>
       <link href="/2022/07/11/Node/Docker%E5%92%8CDocker-compose%E5%AE%89%E8%A3%85/"/>
       <url>/2022/07/11/Node/Docker%E5%92%8CDocker-compose%E5%AE%89%E8%A3%85/</url>
@@ -103,39 +169,6 @@
     
     
     <entry>
-      <title>Identity Service 4 APi 获取用户信息</title>
-      <link href="/2022/04/11/Node/IdentityService4%E8%8E%B7%E5%8F%96%E7%94%A8%E6%88%B7/"/>
-      <url>/2022/04/11/Node/IdentityService4%E8%8E%B7%E5%8F%96%E7%94%A8%E6%88%B7/</url>
-      
-        <content type="html"><![CDATA[<h1 id="Identity-Service-4-APi-获取用户信息"><a href="#Identity-Service-4-APi-获取用户信息" class="headerlink" title="Identity Service 4 APi 获取用户信息"></a>Identity Service 4 APi 获取用户信息</h1><p>在构造Asp.Net等基于.Net Framework等应用时，Web Api或者其它后台往往与前台处于同一进程，一般通过Session或者其它方式获取用户信息。采用bearer JWT认证的Web Api与被调用的前端处于不同的进程甚至不同的服务器，因此不能使用Session等获取用户信息。用户信息通过JWT传递到API，被平台填充到User.Claims中，可以直接获取，代码如下：</p><p><code>from c in User.Claims select new &#123; c.Type, c.Value &#125;</code></p><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> Microsoft.AspNetCore.Authorization;</span><br><span class="line"><span class="keyword">using</span> Microsoft.AspNetCore.Mvc;</span><br><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> System.Linq;</span><br><span class="line"><span class="keyword">using</span> System.Threading.Tasks;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">Api.Controllers</span></span><br><span class="line">&#123;</span><br><span class="line">    [<span class="meta">Route(<span class="string">&quot;identity&quot;</span>)</span>]</span><br><span class="line">    [<span class="meta">Authorize</span>]</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">IdentityController</span> : <span class="title">ControllerBase</span></span><br><span class="line">    &#123;</span><br><span class="line">        [<span class="meta">HttpGet</span>]</span><br><span class="line">        <span class="function"><span class="keyword">public</span> IActionResult <span class="title">Get</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">new</span> JsonResult(<span class="keyword">from</span> c <span class="keyword">in</span> User.Claims <span class="keyword">select</span> <span class="keyword">new</span> &#123; c.Type, c.Value &#125;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure><p> 作者：寻找无名的特质<br> 链接：<a href="https://www.jianshu.com/p/36c2ea3160a0">https://www.jianshu.com/p/36c2ea3160a0</a><br> 来源：简书<br> 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p><h2 id="The-End"><a href="#The-End" class="headerlink" title="The End."></a>The End.</h2>]]></content>
-      
-      
-      <categories>
-          
-          <category> 笔记 </category>
-          
-          <category> .net </category>
-          
-          <category> IdentityServer </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 笔记 </tag>
-            
-            <tag> IdentityServer </tag>
-            
-            <tag> .net </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Clash网易云配置</title>
       <link href="/2022/04/11/blogs/Clash%E7%BD%91%E6%98%93%E4%BA%91%E9%85%8D%E7%BD%AE/"/>
       <url>/2022/04/11/blogs/Clash%E7%BD%91%E6%98%93%E4%BA%91%E9%85%8D%E7%BD%AE/</url>
@@ -173,6 +206,39 @@
     
     
     <entry>
+      <title>Identity Service 4 APi 获取用户信息</title>
+      <link href="/2022/04/11/Node/IdentityService4%E8%8E%B7%E5%8F%96%E7%94%A8%E6%88%B7/"/>
+      <url>/2022/04/11/Node/IdentityService4%E8%8E%B7%E5%8F%96%E7%94%A8%E6%88%B7/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Identity-Service-4-APi-获取用户信息"><a href="#Identity-Service-4-APi-获取用户信息" class="headerlink" title="Identity Service 4 APi 获取用户信息"></a>Identity Service 4 APi 获取用户信息</h1><p>在构造Asp.Net等基于.Net Framework等应用时，Web Api或者其它后台往往与前台处于同一进程，一般通过Session或者其它方式获取用户信息。采用bearer JWT认证的Web Api与被调用的前端处于不同的进程甚至不同的服务器，因此不能使用Session等获取用户信息。用户信息通过JWT传递到API，被平台填充到User.Claims中，可以直接获取，代码如下：</p><p><code>from c in User.Claims select new &#123; c.Type, c.Value &#125;</code></p><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> Microsoft.AspNetCore.Authorization;</span><br><span class="line"><span class="keyword">using</span> Microsoft.AspNetCore.Mvc;</span><br><span class="line"><span class="keyword">using</span> System;</span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;</span><br><span class="line"><span class="keyword">using</span> System.Linq;</span><br><span class="line"><span class="keyword">using</span> System.Threading.Tasks;</span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">Api.Controllers</span></span><br><span class="line">&#123;</span><br><span class="line">    [<span class="meta">Route(<span class="string">&quot;identity&quot;</span>)</span>]</span><br><span class="line">    [<span class="meta">Authorize</span>]</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">IdentityController</span> : <span class="title">ControllerBase</span></span><br><span class="line">    &#123;</span><br><span class="line">        [<span class="meta">HttpGet</span>]</span><br><span class="line">        <span class="function"><span class="keyword">public</span> IActionResult <span class="title">Get</span>()</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">new</span> JsonResult(<span class="keyword">from</span> c <span class="keyword">in</span> User.Claims <span class="keyword">select</span> <span class="keyword">new</span> &#123; c.Type, c.Value &#125;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure><p> 作者：寻找无名的特质<br> 链接：<a href="https://www.jianshu.com/p/36c2ea3160a0">https://www.jianshu.com/p/36c2ea3160a0</a><br> 来源：简书<br> 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p><h2 id="The-End"><a href="#The-End" class="headerlink" title="The End."></a>The End.</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> 笔记 </category>
+          
+          <category> .net </category>
+          
+          <category> IdentityServer </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 笔记 </tag>
+            
+            <tag> .net </tag>
+            
+            <tag> IdentityServer </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>skoruba-Duende.IdentityServer.Admin</title>
       <link href="/2022/04/10/Node/IdentityServer/"/>
       <url>/2022/04/10/Node/IdentityServer/</url>
@@ -197,9 +263,9 @@
             
             <tag> 笔记 </tag>
             
-            <tag> IdentityServer </tag>
-            
             <tag> .net </tag>
+            
+            <tag> IdentityServer </tag>
             
             <tag> ids4 </tag>
             
@@ -238,9 +304,9 @@
             
             <tag> 笔记 </tag>
             
-            <tag> IdentityServer </tag>
-            
             <tag> .net </tag>
+            
+            <tag> IdentityServer </tag>
             
             <tag> ids4 </tag>
             
@@ -310,50 +376,13 @@
       
         <tags>
             
+            <tag> 配置 </tag>
+            
             <tag> 笔记 </tag>
             
             <tag> .net </tag>
             
             <tag> Swagger </tag>
-            
-            <tag> 配置 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>adb连接雷电模拟器修改hosts</title>
-      <link href="/2022/03/20/Node/adb%E8%BF%9E%E6%8E%A5%E9%9B%B7%E7%94%B5%E6%A8%A1%E6%8B%9F%E5%99%A8%E4%BF%AE%E6%94%B9hosts/"/>
-      <url>/2022/03/20/Node/adb%E8%BF%9E%E6%8E%A5%E9%9B%B7%E7%94%B5%E6%A8%A1%E6%8B%9F%E5%99%A8%E4%BF%AE%E6%94%B9hosts/</url>
-      
-        <content type="html"><![CDATA[<h1 id="adb连接雷电模拟器修改hosts"><a href="#adb连接雷电模拟器修改hosts" class="headerlink" title="adb连接雷电模拟器修改hosts"></a><strong>adb连接雷电模拟器修改hosts</strong></h1><p>下面很多都是转载,背景简介:我的模拟器有2个以上devices,按照网上查询的很多都不能使用,在下面才找到解决方案</p><ol><li>如果找到<a href="https://so.csdn.net/so/search?q=adb&spm=1001.2101.3001.7020">adb</a>？</li></ol><p>雷电安装模拟器自带了一份，当然熟悉的朋友，喜欢用自己珍藏的版本也是可以的。雷电自带的版本再安装目录下，名字就叫adb.exe，如本人的电脑adb全路径为：F:\mnq\dnplayer\adb.exe.</p><ol start="2"><li>如何链接设备？</li></ol><p>一步步看命令行</p><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cmd</span><br><span class="line">cd F:\mnq\dnplayer</span><br><span class="line">adb.exe kill-server <span class="comment">//(很多时候连不上，就是因为没有kill)</span></span><br><span class="line">adb.exe devices</span><br></pre></td></tr></table></figure><p>这步很重要，完成之后，会list出所有设备</p><p>备注:我使用的是配置到环境变量中的adb,可以直接使用 adb devices</p><ol start="3"><li>多开的情况下如何指定操作哪个模拟器？</li></ol><p>这一步至关重要，所以提前说明，后面的所有操作都是单开为例，多开的情况，请参考这部分，切记切记！！！</p><p>adb devices会获取模拟器列表，指定模拟器只需要在adb后面加上” -s 模拟器标识”即可！</p><p>比如说：</p><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">5555</span></span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">5557</span></span><br></pre></td></tr></table></figure><p>（对，雷电的adb端口是有规律的，规律就是 5555 + index * 2）</p><p>下面图片是我本地的</p><p><img src="/../../images/adb%E8%BF%9E%E6%8E%A5%E9%9B%B7%E7%94%B5%E6%A8%A1%E6%8B%9F%E5%99%A8%E4%BF%AE%E6%94%B9hosts/20201204141422735.png" alt="20201204141422735"></p><ol start="4"><li>重新挂载模拟器</li></ol><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adb -s emulator<span class="number">-5556</span> remount</span><br></pre></td></tr></table></figure><ol start="5"><li><p>将模拟器hosts pull到本地目录C:\Users\Administrator</p><p><img src="/../../images/adb%E8%BF%9E%E6%8E%A5%E9%9B%B7%E7%94%B5%E6%A8%A1%E6%8B%9F%E5%99%A8%E4%BF%AE%E6%94%B9hosts/20201204141707851.png" alt="20201204141707851"></p></li><li><p>在本地用记事本打开hosts文件(在C:\Users\Administrator文件中 ) 修改hosts文件，然后保存</p><p><img src="/../../images/adb%E8%BF%9E%E6%8E%A5%E9%9B%B7%E7%94%B5%E6%A8%A1%E6%8B%9F%E5%99%A8%E4%BF%AE%E6%94%B9hosts/6a5efc7b62c6a2d51c73a18d8fc7ce6f.png" alt="6a5efc7b62c6a2d51c73a18d8fc7ce6f"></p></li><li><p>将修改后的hosts文件上传到模拟器</p></li></ol><p><img src="/../../images/adb%E8%BF%9E%E6%8E%A5%E9%9B%B7%E7%94%B5%E6%A8%A1%E6%8B%9F%E5%99%A8%E4%BF%AE%E6%94%B9hosts/image-20220320122731087.png" alt="image-20220320122731087"></p><p>上传成功</p><p>++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</p><blockquote><p>备注:上面的过程我看了是可以把hosts上传到模拟器上的,但是hosts的配置不起作用,也不知道什么问题,今天刚刚我把雷电模拟器启用了网络桥接,然后又重新配置了一下hosts,使用第5步把</p></blockquote><ul><li>重新配置的hosts上传到模拟器上,结果现在可以了</li></ul><p><img src="/../../images/adb%E8%BF%9E%E6%8E%A5%E9%9B%B7%E7%94%B5%E6%A8%A1%E6%8B%9F%E5%99%A8%E4%BF%AE%E6%94%B9hosts/image-20220320112458296.png" alt="image-20220320112458296"></p><ul><li>下面的是我的桥接配置</li></ul><p><img src="/../../images/adb%E8%BF%9E%E6%8E%A5%E9%9B%B7%E7%94%B5%E6%A8%A1%E6%8B%9F%E5%99%A8%E4%BF%AE%E6%94%B9hosts/image-20220320112655602.png" alt="image-20220320112655602"></p><p>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</p><p>2021年4月22日17:27:23</p><p>今日重新配置了一遍,发现了几个问题</p><ol><li>我下载下来的hosts修改完以后(我这边修改了两行分别是</li></ol><p>127.0.0.1 aa.com </p><p>127.0.0.1 bb.com</p><p>结果aa.com可以访问到本地,bb不可以,然后我又加了一行cc.com.bb才可以访问.好像是最后一行最好需要回车一下要不然上传到模拟器以后格式会出现问题)</p><ol start="2"><li>修改完以后电脑最好重启一下</li></ol>]]></content>
-      
-      
-      <categories>
-          
-          <category> 笔记 </category>
-          
-          <category> 网络 </category>
-          
-          <category> 配置 </category>
-          
-          <category> 雷电模拟器 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 笔记 </tag>
-            
-            <tag> 配置 </tag>
-            
-            <tag> 网络 </tag>
-            
-            <tag> 雷电模拟器 </tag>
             
         </tags>
       
@@ -387,11 +416,48 @@
     
     
     <entry>
+      <title>adb连接雷电模拟器修改hosts</title>
+      <link href="/2022/03/20/Node/adb%E8%BF%9E%E6%8E%A5%E9%9B%B7%E7%94%B5%E6%A8%A1%E6%8B%9F%E5%99%A8%E4%BF%AE%E6%94%B9hosts/"/>
+      <url>/2022/03/20/Node/adb%E8%BF%9E%E6%8E%A5%E9%9B%B7%E7%94%B5%E6%A8%A1%E6%8B%9F%E5%99%A8%E4%BF%AE%E6%94%B9hosts/</url>
+      
+        <content type="html"><![CDATA[<h1 id="adb连接雷电模拟器修改hosts"><a href="#adb连接雷电模拟器修改hosts" class="headerlink" title="adb连接雷电模拟器修改hosts"></a><strong>adb连接雷电模拟器修改hosts</strong></h1><p>下面很多都是转载,背景简介:我的模拟器有2个以上devices,按照网上查询的很多都不能使用,在下面才找到解决方案</p><ol><li>如果找到<a href="https://so.csdn.net/so/search?q=adb&spm=1001.2101.3001.7020">adb</a>？</li></ol><p>雷电安装模拟器自带了一份，当然熟悉的朋友，喜欢用自己珍藏的版本也是可以的。雷电自带的版本再安装目录下，名字就叫adb.exe，如本人的电脑adb全路径为：F:\mnq\dnplayer\adb.exe.</p><ol start="2"><li>如何链接设备？</li></ol><p>一步步看命令行</p><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cmd</span><br><span class="line">cd F:\mnq\dnplayer</span><br><span class="line">adb.exe kill-server <span class="comment">//(很多时候连不上，就是因为没有kill)</span></span><br><span class="line">adb.exe devices</span><br></pre></td></tr></table></figure><p>这步很重要，完成之后，会list出所有设备</p><p>备注:我使用的是配置到环境变量中的adb,可以直接使用 adb devices</p><ol start="3"><li>多开的情况下如何指定操作哪个模拟器？</li></ol><p>这一步至关重要，所以提前说明，后面的所有操作都是单开为例，多开的情况，请参考这部分，切记切记！！！</p><p>adb devices会获取模拟器列表，指定模拟器只需要在adb后面加上” -s 模拟器标识”即可！</p><p>比如说：</p><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">5555</span></span><br><span class="line"><span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>:<span class="number">5557</span></span><br></pre></td></tr></table></figure><p>（对，雷电的adb端口是有规律的，规律就是 5555 + index * 2）</p><p>下面图片是我本地的</p><p><img src="/../../images/adb%E8%BF%9E%E6%8E%A5%E9%9B%B7%E7%94%B5%E6%A8%A1%E6%8B%9F%E5%99%A8%E4%BF%AE%E6%94%B9hosts/20201204141422735.png" alt="20201204141422735"></p><ol start="4"><li>重新挂载模拟器</li></ol><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">adb -s emulator<span class="number">-5556</span> remount</span><br></pre></td></tr></table></figure><ol start="5"><li><p>将模拟器hosts pull到本地目录C:\Users\Administrator</p><p><img src="/../../images/adb%E8%BF%9E%E6%8E%A5%E9%9B%B7%E7%94%B5%E6%A8%A1%E6%8B%9F%E5%99%A8%E4%BF%AE%E6%94%B9hosts/20201204141707851.png" alt="20201204141707851"></p></li><li><p>在本地用记事本打开hosts文件(在C:\Users\Administrator文件中 ) 修改hosts文件，然后保存</p><p><img src="/../../images/adb%E8%BF%9E%E6%8E%A5%E9%9B%B7%E7%94%B5%E6%A8%A1%E6%8B%9F%E5%99%A8%E4%BF%AE%E6%94%B9hosts/6a5efc7b62c6a2d51c73a18d8fc7ce6f.png" alt="6a5efc7b62c6a2d51c73a18d8fc7ce6f"></p></li><li><p>将修改后的hosts文件上传到模拟器</p></li></ol><p><img src="/../../images/adb%E8%BF%9E%E6%8E%A5%E9%9B%B7%E7%94%B5%E6%A8%A1%E6%8B%9F%E5%99%A8%E4%BF%AE%E6%94%B9hosts/image-20220320122731087.png" alt="image-20220320122731087"></p><p>上传成功</p><p>++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++</p><blockquote><p>备注:上面的过程我看了是可以把hosts上传到模拟器上的,但是hosts的配置不起作用,也不知道什么问题,今天刚刚我把雷电模拟器启用了网络桥接,然后又重新配置了一下hosts,使用第5步把</p></blockquote><ul><li>重新配置的hosts上传到模拟器上,结果现在可以了</li></ul><p><img src="/../../images/adb%E8%BF%9E%E6%8E%A5%E9%9B%B7%E7%94%B5%E6%A8%A1%E6%8B%9F%E5%99%A8%E4%BF%AE%E6%94%B9hosts/image-20220320112458296.png" alt="image-20220320112458296"></p><ul><li>下面的是我的桥接配置</li></ul><p><img src="/../../images/adb%E8%BF%9E%E6%8E%A5%E9%9B%B7%E7%94%B5%E6%A8%A1%E6%8B%9F%E5%99%A8%E4%BF%AE%E6%94%B9hosts/image-20220320112655602.png" alt="image-20220320112655602"></p><p>&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</p><p>2021年4月22日17:27:23</p><p>今日重新配置了一遍,发现了几个问题</p><ol><li>我下载下来的hosts修改完以后(我这边修改了两行分别是</li></ol><p>127.0.0.1 aa.com </p><p>127.0.0.1 bb.com</p><p>结果aa.com可以访问到本地,bb不可以,然后我又加了一行cc.com.bb才可以访问.好像是最后一行最好需要回车一下要不然上传到模拟器以后格式会出现问题)</p><ol start="2"><li>修改完以后电脑最好重启一下</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 笔记 </category>
+          
+          <category> 网络 </category>
+          
+          <category> 雷电模拟器 </category>
+          
+          <category> 配置 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 配置 </tag>
+            
+            <tag> 笔记 </tag>
+            
+            <tag> 网络 </tag>
+            
+            <tag> 雷电模拟器 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hello World</title>
       <link href="/2022/03/18/hello-world/"/>
       <url>/2022/03/18/hello-world/</url>
       
-        <content type="html"><![CDATA[<h1 id="你好，世界！"><a href="#你好，世界！" class="headerlink" title="你好，世界！"></a>你好，世界！</h1><p>[Hello world!]</p><p>​—–2022年3月18日00:28:02</p><hr><p>Todo：</p><ul><li><input disabled="" type="checkbox"> SqlSugar ORM - BlogCore</li><li><input disabled="" type="checkbox"> 根据Models生成表</li><li><input disabled="" type="checkbox"> 根据表生成Models</li><li><input disabled="" type="checkbox"> 生成三层</li></ul><hr><h2 id="文章模板"><a href="#文章模板" class="headerlink" title="文章模板"></a>文章模板</h2><h3 id="Page-Front-matter"><a href="#Page-Front-matter" class="headerlink" title="Page Front-matter"></a>Page Front-matter</h3><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"> <span class="string">title</span><span class="comment">#【必需】页面标题</span></span><br><span class="line"> <span class="string">date</span><span class="comment">#【必需】页面创建日期</span></span><br><span class="line"> <span class="string">type</span><span class="comment">#【必需】标籤、分类和友情链接三个页面需要配置</span></span><br><span class="line"> <span class="string">updated</span><span class="comment">#【可选】页面更新日期</span></span><br><span class="line"> <span class="string">description</span><span class="comment">#【可选】页面描述</span></span><br><span class="line"> <span class="string">keywords</span><span class="comment">#【可选】页面关键字</span></span><br><span class="line"> <span class="string">comments</span><span class="comment">#【可选】显示页面评论模块(默认 true)</span></span><br><span class="line"> <span class="string">top_img</span><span class="comment">#【可选】页面顶部图片</span></span><br><span class="line"> <span class="string">mathjax</span><span class="string">【#可选】显示mathjax(当设置mathjax的per_page:</span> <span class="literal">false</span><span class="string">时，才需要配置，默认</span> <span class="literal">false</span><span class="string">)</span></span><br><span class="line"> <span class="string">katex</span><span class="comment">#【可选】显示katex(当设置katex的per_page: false时，才需要配置，默认 false)</span></span><br><span class="line"> <span class="string">aside</span><span class="comment">#【可选】显示侧边栏 (默认 true)</span></span><br><span class="line"> <span class="string">aplayer</span><span class="comment">#【可选】在需要的页面加载aplayer的js和css,请参考文章下面的音乐 配置</span></span><br><span class="line"> <span class="string">highlight_shrink</span><span class="comment">#【可选】配置代码框是否展开(true/false)(默认为设置中highlight_shrink的配置)</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure><h3 id="Post-Front-matter"><a href="#Post-Front-matter" class="headerlink" title="Post Front-matter"></a>Post Front-matter</h3><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"> <span class="string">title</span><span class="comment">#【必需】文章标题</span></span><br><span class="line"> <span class="string">date</span><span class="comment">#【必需】文章创建日期</span></span><br><span class="line"> <span class="string">updated</span><span class="comment">#【可选】文章更新日期</span></span><br><span class="line"> <span class="string">tags</span><span class="comment">#【可选】文章标籤</span></span><br><span class="line"> <span class="string">sticky</span> <span class="comment"># 权重越大级别越高</span></span><br><span class="line"> <span class="string">categories</span><span class="comment">#【可选】文章分类</span></span><br><span class="line"> <span class="string">keywords</span><span class="comment">#【可选】文章关键字</span></span><br><span class="line"> <span class="string">description</span><span class="comment">#【可选】文章描述</span></span><br><span class="line"> <span class="string">top_img</span><span class="comment">#【可选】文章顶部图片</span></span><br><span class="line"> <span class="string">cover</span><span class="comment">#【可选】文章缩略图(如果没有设置top_img,文章页顶部将显示缩略图，可设为false/图片地址/留空)</span></span><br><span class="line"> <span class="string">comments</span><span class="comment">#【可选】显示文章评论模块(默认 true)</span></span><br><span class="line"> <span class="string">toc</span><span class="comment">#【可选】显示文章TOC(默认为设置中toc的enable配置)</span></span><br><span class="line"> <span class="string">toc_number</span><span class="comment">#【可选】显示toc_number(默认为设置中toc的number配置)</span></span><br><span class="line"> <span class="string">toc_style_simple</span><span class="comment">#【可选】显示 toc 简洁模式</span></span><br><span class="line"> <span class="string">copyright</span><span class="comment">#【可选】显示文章版权模块(默认为设置中post_copyright的enable配置)</span></span><br><span class="line"> <span class="string">copyright_author</span><span class="comment">#【可选】文章版权模块的文章作者</span></span><br><span class="line"> <span class="string">copyright_author_href</span><span class="comment">#【可选】文章版权模块的文章作者链接</span></span><br><span class="line"> <span class="string">copyright_url</span><span class="comment">#【可选】文章版权模块的文章连结链接</span></span><br><span class="line"> <span class="string">copyright_info</span><span class="comment">#【可选】文章版权模块的版权声明文字</span></span><br><span class="line"> <span class="string">mathjax</span><span class="comment">#【可选】显示mathjax(当设置mathjax的per_page: false时，才需要配置，默认 false)</span></span><br><span class="line"> <span class="string">katex</span><span class="comment">#【可选】显示katex(当设置katex的per_page: false时，才需要配置，默认 false)</span></span><br><span class="line"> <span class="string">aplayer</span><span class="comment">#【可选】在需要的页面加载aplayer的js和css,请参考文章下面的音乐 配置</span></span><br><span class="line"> <span class="string">highlight_shrink</span><span class="comment">#【可选】配置代码框是否展开(true/false)(默认为设置中highlight_shrink的配置)</span></span><br><span class="line"> <span class="string">aside</span><span class="comment">#【可选】显示侧边栏 (默认 true)</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure><h3 id="自用"><a href="#自用" class="headerlink" title="自用"></a>自用</h3><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"> <span class="attr">title:</span><span class="comment">#【必需】文章标题</span></span><br><span class="line"> <span class="attr">date:</span><span class="comment">#【必需】文章创建日期</span></span><br><span class="line"> <span class="attr">updated:</span><span class="comment">#【可选】文章更新日期</span></span><br><span class="line"> <span class="attr">tags:</span> [<span class="string">XXX</span>,<span class="string">XXX</span>]<span class="comment">#【可选】文章标籤</span></span><br><span class="line"> <span class="attr">categories:</span><span class="comment">#【可选】文章分类</span></span><br><span class="line"> <span class="bullet">-</span> [<span class="string">XXX</span>,<span class="string">XXX</span>]</span><br><span class="line"> <span class="bullet">-</span> [<span class="string">XXX</span>,<span class="string">XXX</span>]</span><br><span class="line"> <span class="attr">keywords:</span><span class="comment">#【可选】文章关键字</span></span><br><span class="line"> <span class="attr">description:</span><span class="comment">#【可选】文章描述</span></span><br><span class="line"> <span class="attr">top_img:</span><span class="comment">#【可选】文章顶部图片</span></span><br><span class="line"> <span class="attr">cover:</span> <span class="literal">false</span><span class="comment">#【可选】文章缩略图(如果没有设置top_img,文章页顶部将显示缩略图，可设为false/图片地址/留空)</span></span><br><span class="line"> <span class="string">---</span></span><br></pre></td></tr></table></figure>]]></content>
+        <content type="html"><![CDATA[<h1 id="你好，世界！"><a href="#你好，世界！" class="headerlink" title="你好，世界！"></a>你好，世界！</h1><p>[Hello world!]</p><p>​—–2022年3月18日00:28:02</p><hr><p>Todo：</p><ul><li><input disabled="" type="checkbox"> SqlSugar ORM - BlogCore</li><li><input disabled="" type="checkbox"> 根据Models生成表</li><li><input disabled="" type="checkbox"> 根据表生成Models</li><li><input disabled="" type="checkbox"> 生成三层</li></ul><hr><h2 id="文章模板"><a href="#文章模板" class="headerlink" title="文章模板"></a>文章模板</h2><h3 id="Page-Front-matter"><a href="#Page-Front-matter" class="headerlink" title="Page Front-matter"></a>Page Front-matter</h3><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"> <span class="string">title</span><span class="comment">#【必需】页面标题</span></span><br><span class="line"> <span class="string">date</span><span class="comment">#【必需】页面创建日期</span></span><br><span class="line"> <span class="string">type</span><span class="comment">#【必需】标籤、分类和友情链接三个页面需要配置</span></span><br><span class="line"> <span class="string">updated</span><span class="comment">#【可选】页面更新日期</span></span><br><span class="line"> <span class="string">description</span><span class="comment">#【可选】页面描述</span></span><br><span class="line"> <span class="string">keywords</span><span class="comment">#【可选】页面关键字</span></span><br><span class="line"> <span class="string">comments</span><span class="comment">#【可选】显示页面评论模块(默认 true)</span></span><br><span class="line"> <span class="string">top_img</span><span class="comment">#【可选】页面顶部图片</span></span><br><span class="line"> <span class="string">mathjax</span><span class="string">【#可选】显示mathjax(当设置mathjax的per_page:</span> <span class="literal">false</span><span class="string">时，才需要配置，默认</span> <span class="literal">false</span><span class="string">)</span></span><br><span class="line"> <span class="string">katex</span><span class="comment">#【可选】显示katex(当设置katex的per_page: false时，才需要配置，默认 false)</span></span><br><span class="line"> <span class="string">aside</span><span class="comment">#【可选】显示侧边栏 (默认 true)</span></span><br><span class="line"> <span class="string">aplayer</span><span class="comment">#【可选】在需要的页面加载aplayer的js和css,请参考文章下面的音乐 配置</span></span><br><span class="line"> <span class="string">highlight_shrink</span><span class="comment">#【可选】配置代码框是否展开(true/false)(默认为设置中highlight_shrink的配置)</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure><h3 id="Post-Front-matter"><a href="#Post-Front-matter" class="headerlink" title="Post Front-matter"></a>Post Front-matter</h3><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"> <span class="string">title</span><span class="comment">#【必需】文章标题</span></span><br><span class="line"> <span class="string">date</span><span class="comment">#【必需】文章创建日期</span></span><br><span class="line"> <span class="string">updated</span><span class="comment">#【可选】文章更新日期</span></span><br><span class="line"> <span class="string">tags</span><span class="comment">#【可选】文章标籤</span></span><br><span class="line"> <span class="string">sticky</span> <span class="comment"># 权重越大级别越高</span></span><br><span class="line"> <span class="string">categories</span><span class="comment">#【可选】文章分类</span></span><br><span class="line"> <span class="string">keywords</span><span class="comment">#【可选】文章关键字</span></span><br><span class="line"> <span class="string">description</span><span class="comment">#【可选】文章描述</span></span><br><span class="line"> <span class="string">top_img</span><span class="comment">#【可选】文章顶部图片</span></span><br><span class="line"> <span class="string">cover</span><span class="comment">#【可选】文章缩略图(如果没有设置top_img,文章页顶部将显示缩略图，可设为false/图片地址/留空)</span></span><br><span class="line"> <span class="string">comments</span><span class="comment">#【可选】显示文章评论模块(默认 true)</span></span><br><span class="line"> <span class="string">toc</span><span class="comment">#【可选】显示文章TOC(默认为设置中toc的enable配置)</span></span><br><span class="line"> <span class="string">toc_number</span><span class="comment">#【可选】显示toc_number(默认为设置中toc的number配置)</span></span><br><span class="line"> <span class="string">toc_style_simple</span><span class="comment">#【可选】显示 toc 简洁模式</span></span><br><span class="line"> <span class="string">copyright</span><span class="comment">#【可选】显示文章版权模块(默认为设置中post_copyright的enable配置)</span></span><br><span class="line"> <span class="string">copyright_author</span><span class="comment">#【可选】文章版权模块的文章作者</span></span><br><span class="line"> <span class="string">copyright_author_href</span><span class="comment">#【可选】文章版权模块的文章作者链接</span></span><br><span class="line"> <span class="string">copyright_url</span><span class="comment">#【可选】文章版权模块的文章连结链接</span></span><br><span class="line"> <span class="string">copyright_info</span><span class="comment">#【可选】文章版权模块的版权声明文字</span></span><br><span class="line"> <span class="string">mathjax</span><span class="comment">#【可选】显示mathjax(当设置mathjax的per_page: false时，才需要配置，默认 false)</span></span><br><span class="line"> <span class="string">katex</span><span class="comment">#【可选】显示katex(当设置katex的per_page: false时，才需要配置，默认 false)</span></span><br><span class="line"> <span class="string">aplayer</span><span class="comment">#【可选】在需要的页面加载aplayer的js和css,请参考文章下面的音乐 配置</span></span><br><span class="line"> <span class="string">highlight_shrink</span><span class="comment">#【可选】配置代码框是否展开(true/false)(默认为设置中highlight_shrink的配置)</span></span><br><span class="line"> <span class="string">aside</span><span class="comment">#【可选】显示侧边栏 (默认 true)</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure><h3 id="自用"><a href="#自用" class="headerlink" title="自用"></a>自用</h3><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span><span class="comment">#【必需】文章标题</span></span><br><span class="line"><span class="attr">date:</span><span class="comment">#【必需】文章创建日期</span></span><br><span class="line"><span class="attr">updated:</span><span class="comment">#【可选】文章更新日期</span></span><br><span class="line"><span class="attr">tags:</span> [<span class="string">XXX</span>,<span class="string">XXX</span>]<span class="comment">#【可选】文章标籤</span></span><br><span class="line"><span class="attr">categories:</span><span class="comment">#【可选】文章分类</span></span><br><span class="line"> <span class="bullet">-</span> [<span class="string">XXX</span>,<span class="string">XXX</span>]</span><br><span class="line"> <span class="bullet">-</span> [<span class="string">XXX</span>,<span class="string">XXX</span>]</span><br><span class="line"><span class="attr">keywords:</span><span class="comment">#【可选】文章关键字</span></span><br><span class="line"><span class="attr">description:</span><span class="comment">#【可选】文章描述</span></span><br><span class="line"><span class="attr">top_img:</span><span class="comment">#【可选】文章顶部图片</span></span><br><span class="line"><span class="attr">cover:</span> <span class="literal">false</span><span class="comment">#【可选】文章缩略图(如果没有设置top_img,文章页顶部将显示缩略图，可设为false/图片地址/留空)</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>]]></content>
       
       
       <categories>
